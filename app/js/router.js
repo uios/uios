@@ -83,7 +83,7 @@ function view(paths) {
       
     }
     else { 
-      body.removeAttribute('data-profile');
+      document.body.removeAttribute('data-profile');
       window.mediaStream ? mediaStream.getTracks().forEach(track => track.stop()) : null;
       resolve(paths);
     }
