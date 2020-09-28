@@ -1,3 +1,4 @@
+//window.addEventListener("popstate", e => (e.state ? e.state.router({pop:true}) : null));
 window.mvc = { };
 
 function init() {
@@ -17,6 +18,14 @@ function init() {
       "body": document.body,
       "desktop": byId("desktop")
     };
+  
+    firebase.auth().onAuthStateChanged(user => {
+        auth.change(user).then(goto => {
+            console.log({goto});
+            goto = (user && document.body.dataset.ppp === '/my/account/') ? '/' : window.location.pathname;
+            goto.router();
+        });
+    });
                               
     //dom.popup.addEventListener("touchstart", on.touch, {passive: true});
     //dom.popup.addEventListener("touchmove", on.touch, {passive: true});

@@ -16,8 +16,8 @@ window.auth = {
                 user.photoURL ? dom.avi.style.backgroundImage = 'url("' + user.photoURL + '")' : null;
                 goto = (document.body.dataset.page === '/my/account/' ? '/' : window.location.pathname)
             } else {
-                byId('feed-alerts').innerHTML = "";
-                dom.avi.removeAttribute('style');
+                //byId('feed-alerts').innerHTML = "";
+                //dom.avi.removeAttribute('style');
                 document.body.removeAttribute('data-uid');
                 goto = window.location.pathname+window.location.hash+window.location.search;
             }
