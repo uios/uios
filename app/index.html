@@ -19,14 +19,15 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <link async rel="stylesheet" href="/index.css" media="all">
-    <script async src='/cdn/js/firebase-app.js'></script>
-    <script async src='/cdn/js/firebase-auth.js'></script>  
-    <script async src='/cdn/js/global.js'></script>
-    <script async src='/cdn/js/jpurey.js'></script>
-    <script async src='/cdn/js/auth.js'></script>
-    <script async src='/cdn/js/router.js'></script>  
-    <script async src='/cdn/js/touch.js'></script>  
-    <script async src='/index.js'></script>
+    <script src='/js/firebase-app.js'></script>
+    <script src='/js/firebase-auth.js'></script>  
+    <script src='/index.js'></script>
+    <script async src='/js/global.js'></script>
+    <script async src='/js/jpurey.js'></script>
+    <script async src='/js/auth.js'></script>
+    <script async src='/js/api.js'></script>
+    <script async src='/js/mvc.js'></script>
+    <script async src='/js/router.js'></script>
   </head>
 
   <body class="body" onload="init(window.location.pathname+window.location.hash)">
@@ -46,8 +47,8 @@
 
     <div class="boot"></div>
 
-    <aside id='body-aside' class='body-aside'>
-      <section id="splash" class="splash" onclick="'/login/'.router()">
+    <aside class='body-aside gradient-rgb' id='body-aside'>
+      <section id="splash" class="splash" onclick="'/my/'.router()">
         <div id='clock' class='clock'>
           <header id='time' class='time'>12:00</header>
           <footer id='date' class='date'>January 1, 1970</footer>
@@ -56,7 +57,7 @@
       <section class='signin'>
         <div class="lock" onclick="'/'.router()"></div>
         <div class='overflow-x'>
-          <div class='connect ui' onclick="'/my/'.router()"></div>
+          <div class='connect ui' onclick="'/my/desktop/'.router()"></div>
           <a id='fbLogIn' class="connect fb" href="/oauth/facebook"></a>
           <div id='ggSignIn' class="connect gg" onclick="console.log(event.target.className); handleAuthClick();"></div>
           <a id='ttConnect' class="connect tt" href="/oauth/twitter"></a>

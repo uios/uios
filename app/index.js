@@ -1,1 +1,35 @@
-function init() { }
+window.mvc = { };
+
+function init() {
+    
+  return new Promise((resolve, reject) => {
+
+    var dt = new Date();
+
+    firebase.initializeApp(auth.config);
+    document.body.removeAttribute('data-nojs');
+
+    global.time = parseInt(pad(dt.getHours(),2)+''+pad(dt.getMinutes(),2));
+
+    window.app = window.domain();
+    window.cdn = 'https://cdn.'+app+'.'+tld()+'/file/mzncdn';
+    window.dom = {
+      "body": document.body,
+      "desktop": byId("desktop")
+    };
+                              
+    //dom.popup.addEventListener("touchstart", on.touch, {passive: true});
+    //dom.popup.addEventListener("touchmove", on.touch, {passive: true});
+
+    //dom.main.addEventListener("touchstart", on.touch, {passive: true});
+    //dom.main.addEventListener("touchmove", on.touch, {passive: true});
+    
+    //dom.header.addEventListener("touchstart", on.touch, {passive: true});
+    //dom.header.addEventListener("touchmove", on.touch, {passive: true});
+                                   
+    //dom.footer.addEventListener("touchstart", on.touch, {passive: true});
+    //dom.footer.addEventListener("touchmove", on.touch, {passive: true});
+
+  });
+
+}

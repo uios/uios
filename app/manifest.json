@@ -1,0 +1,9 @@
+{
+    "name": "uiOS",
+    "short_name": "uios",
+    "theme_color": "#777",
+    "background_color": "#777",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+}
