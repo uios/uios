@@ -1,0 +1,16 @@
+https://uios.online  /app/index.html 200
+https://uios.online/favicon.ico /app/favicon.ico 200
+https://uios.online/index.css /app/index.css 200
+https://uios.online/index.js /app/index.js 200
+https://uios.online/manifest.json /app/manifest.icon 200
+https://uios.online/sw.js /app/sw.js 200
+https://uios.online/css/* /app/css/:splat 200
+https://uios.online/gif/* /app/gif/:splat 200
+https://uios.online/html/* /app/html/:splat 200
+https://uios.online/js/* /app/js/:splat 200
+https://uios.online/jpg/* /app/jpg/:splat 200
+https://uios.online/json/* /app/json/:splat 200
+https://uios.online/png/* /app/png/:splat 200
+https://uios.online/svg/* /app/svg/:splat 200
+https://uios.online/ttf/* /app/ttf/:splat 200
+https://uios.online/* /app/index.html 200
