@@ -47,23 +47,26 @@
 
     <div class="boot"></div>
 
-    <aside class='body-aside gradient-rgb' id='body-aside'>
-      <section class='signin'>
-        <div class="lock" onclick="'/'.router()"></div>
-        <div class='my-page'>
-          <div class='connect ui' onclick="'/my/desktop/'.router()"></div>
-          <a id='fbLogIn' class="connect fb" href="/oauth/facebook"></a>
-          <div id='ggSignIn' class="connect gg" onclick="console.log(event.target.className); handleAuthClick();"></div>
-          <a id='ttConnect' class="connect tt" href="/oauth/twitter"></a>
-        </div>
-      </section>
-      <section id="splash" class="splash" onclick="'/my/'.router()">
-        <div id='clock' class='clock'>
-          <header id='time' class='time'>12:00</header>
-          <footer id='date' class='date'>January 1, 1970</footer>
-        </div>
-      </section>
-    </aside>
+    <aside class='body-aside gradient-rgb' id='body-aside'><!--
+      --><section class='signin'><!--
+      --><div class="lock" onclick="'/'.router()"></div><!--
+        --><div class='my-page'><!--
+          --><div></div><!--
+          --><form><!--
+            --><input type="text"><!--
+            --><div><input type="password"><input type="submit"></div><!--
+          --></form><!--
+          --><div class="connect github"></div><!--
+          --><div class="connect google"></div><!--
+        --></div><!--
+      --></section><!--
+      --><section id="splash" class="splash" onclick="'/my/'.router()"><!--
+        --><div id='clock' class='clock'><!--
+          --><header id='time' class='time'>12:00</header><!--
+          --><footer id='date' class='date'>January 1, 1970</footer><!--
+        --></div><!--
+      --></section><!--
+    --></aside>
 
     <section id='desktop' class='desktop blur' onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'>
       <div class="ico" data-app="account" style="background-image:url(/url/png/ico/logo-account_50.png)"></div>
