@@ -4,6 +4,7 @@ https://uios.online/index.css /app/index.css 200
 https://uios.online/index.js /app/index.js 200
 https://uios.online/manifest.json /app/manifest.icon 200
 https://uios.online/sw.js /app/sw.js 200
+https://uios.online/apps/* /app/apps/:splat 200
 https://uios.online/css/* /app/css/:splat 200
 https://uios.online/gif/* /app/gif/:splat 200
 https://uios.online/html/* /app/html/:splat 200
