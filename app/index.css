@@ -69,9 +69,9 @@
 .desktop .apps .app[data-app="gallery"] a:after {background-image: url(/apps/gallery/svg/icon.svg);background-size: 50%;filter: invert(1);z-index: 1;}
 .desktop .apps .app[data-app="gallery"] a:before {background: linear-gradient(to top, #8ddab2, #ccf3ed);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
 .desktop .apps .app[data-app="recorder"] a:after {background-image: url(/apps/recorder/svg/icon.svg);background-size: 50%;filter: invert(1);z-index: 1;}
-.desktop .apps .app[data-app="recorder"] a:before {background: linear-gradient(to top, #3F51B5, #009688);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.desktop .apps .app[data-app="weather"] a:after {background-image: url(/apps/weather/svg/icon.svg);background-size: 50%;filter: invert(1);z-index: 1;}
-.desktop .apps .app[data-app="weather"] a:before {background: linear-gradient(to top, #f12711, #f5af19);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
+.desktop .apps .app[data-app="recorder"] a:before {background: linear-gradient(to top, #3F51B5, #26a3b9);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
+.desktop .apps .app[data-app="weather"] a:after {background-image: url(/apps/weather/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.desktop .apps .app[data-app="weather"] a:before {background: linear-gradient(to top, #fabe02, #26a3b9);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
 .desktop .apps .app[data-app="words"] a:after {background-image: url(/apps/words/svg/icon.svg);background-size: 50%;filter: invert(1);z-index: 1;}
 .desktop .apps .app[data-app="words"] a:before {background: linear-gradient(to top, #f12711, #f5af19);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
 
