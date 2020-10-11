@@ -27,12 +27,13 @@
     <script async src='/js/auth.js'></script>
     <script async src='/js/api.js'></script>
     <script async src='/js/mvc.js'></script>
+    <script async src='/js/on.js'></script>
     <script async src='/js/router.js'></script>
-  </head>
+  </head><!--
 
-  <body class="body" onload="init(window.location.pathname+window.location.hash)">
+  --><body class="body" onload="init(window.location.pathname+window.location.hash)"><!--
 
-    <noscript>
+    --><noscript>
       <div>Javascript Required</div>
       <div>We're sorry, but MallZones doesn't work properly without JavaScript enabled. If you can't enable Javscript, try visiting our <a>optimized website</a></div>
       <style>
@@ -43,21 +44,21 @@
         noscript div:nth-child(2) { line-height: calc(50px/3); font-family: Lato Light; font-weight: bolder; font-size: 13px; }
         [data-nojs] > :not(noscript) { display: none; }
       </style>
-    </noscript>
+    </noscript><!--
 
-    <div class="boot"></div>
+    --><div class="boot"></div><!--
 
-    <aside class='body-aside gradient-rgb' id='body-aside'><!--
+    --><aside class='body-aside gradient-rgb' id='body-aside'><!--
       --><section class='signin'><!--
       --><div class="lock" onclick="'/'.router()"></div><!--
         --><div class='my-page'><!--
           --><div></div><!--
-          --><form><!--
-            --><input type="text"><!--
-            --><div><input type="password"><input type="submit"></div><!--
+          --><form onsubmit="on.submit.auth(event);"><!--
+            --><div class="input"><input placeholder="Email" type="email"></div><!--
+            --><div class="input"><input placeholder="Password" type="password"><input type="submit" value=""></div><!--
           --></form><!--
-          --><div class="connect github"></div><!--
-          --><div class="connect google"></div><!--
+          --><div class="connect google" data-after="Continue with Google"></div><!--
+          --><div class="connect guests" data-after="Continue as Guest" onclick="'/desktop/'.router()"></div><!--
         --></div><!--
       --></section><!--
       --><section id="splash" class="splash" onclick="'/my/'.router()"><!--
@@ -66,33 +67,50 @@
           --><footer id='date' class='date'>January 1, 1970</footer><!--
         --></div><!--
       --></section><!--
-    --></aside>
+    --></aside><!--
 
-    <section id='desktop' class='desktop blur' onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'>
-      <div class="ico" data-app="account" style="background-image:url(/url/png/ico/logo-account_50.png)"></div>
-      <div class="ico" data-app="builder" style="background-image:url(/url/png/ico/logo-builder_50.png)"></div>
-      <div class="ico" data-app="cloud" style="background-image:url(/url/png/ico/logo-cloud_50.png)"></div>
-      <div class="ico" data-app="market" style="background-image:url(/url/png/ico/logo-market_50.png)"></div>
-      <div class="ico" data-app="settings" style="background-image:url(/url/png/ico/logo-settings_50.png)"></div>
-    </section>
-
-    <footer id='taskbar' class='taskbar'>
-      <section id='start-menu' class='start-menu'>
-        <div id='access' class='access'>
-           <div id='fullscreen' class='fullscreen'></div>
-           <div id='avatar' class='avatar'></div>
-           <div id='explorer' class='explorer'></div>
-           <div id='settings' class='settings'></div>
-           <div id='power' class='power'></div>
-        </div>
-        <div id='apps' class='apps' onclick='openApp(event.target.dataset.app)'></div>
+    --><main id='desktop' class='desktop blur' onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'>
+      <section class="apps">
+        <div class="app ico" data-after="Account" data-app="account"><a></a></div>
+        <div class="app ico" data-after="Arcade" data-app="arcade"><a></a></div>
+        <div class="app ico" data-after="Build" data-app="build"><a></a></div>
+        <div class="app ico" data-after="Creator" data-app="creator"><a></a></div>
+        <div class="app ico" data-after="Calculator" data-app="calculator"><a></a></div>
+        <div class="app ico" data-after="Camera" data-app="camera"><a></a></div>    
+        <div class="app ico" data-after="Draw" data-app="draw"><a></a></div>
+        <div class="app ico" data-after="Library" data-app="library"><a></a></div>
+        <div class="app ico" data-after="Market" data-app="market"><a></a></div>
+        <div class="app ico" data-after="Media" data-app="media"><a></a></div>    
+        <div class="app ico" data-after="Notes" data-app="notes"><a></a></div>        
+        <div class="app ico" data-after="Office" data-app="office"><a></a></div>        
+        <div class="app ico" data-after="Pages" data-app="pages"><a></a></div>
+        <div class="app ico" data-after="Talk" data-app="talk"><a></a></div>
+        <div class="app ico" data-after="Jukebox" data-app="jukebox"><a></a></div>
+        <div class="app ico" data-after="Gallery" data-app="gallery"><a></a></div>
+        <div class="app ico" data-after="Recorder" data-app="recorder"><a></a></div>
+        <div class="app ico" data-after="Weather" data-app="weather"><a></a></div>
+        <div class="app ico" data-after="Words" data-app="words"><a></a></div>    
       </section>
-      <section>
-        <div id='start-button' class='start-button'></div>
-        <div id='tasks' class='tasks' onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'></div>
-        <div id='task-manager' class='task-manager'></div>
-      </section>
-    </footer>
-  </body>
+      <footer id='taskbar' class='taskbar'>
+        <section id='start-menu' class='start-menu'>
+          <header id='access' class='access'>
+             <div id='fullscreen' class='fullscreen'></div>
+             <div id='avatar' class='avatar'></div>
+             <div id='explorer' class='explorer'></div>
+             <div id='settings' class='settings'></div>
+             <div id='power' class='power'></div>
+          </header>
+          <section class='apps' id='apps' onclick='openApp(event.target.dataset.app)'></section>
+          <form class="search" id="search"></form>
+        </section>
+        <section onclick="'/my/'.router();">
+          <div id='start-button' class='start-button'></div>
+          <div id='tasks' class='tasks' onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'></div>
+          <div id='task-manager' class='task-manager'></div>
+        </section>
+      </footer>
+    </main><!--
 
-</html>
+  --></body><!--
+
+--></html>

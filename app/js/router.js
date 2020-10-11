@@ -80,15 +80,18 @@ function view(paths) {
           else { mvc.v.page.my.menu(port).then(resolve(paths)); }
         }
       }   
+        
+      if(root === 'desktop') {
+        if(get.length>1) {
+        } else {
+          mvc.v.page.my.desktop(auth.user()).then(resolve(paths));
+        }
+      }   
       
     }
     else { 
-      document.body.removeAttribute('data-profile');
-      window.mediaStream ? mediaStream.getTracks().forEach(track => track.stop()) : null;
       resolve(paths);
     }
-    x2 = true;  
-    dom.spriii.classList[x2 ? 'add' : 'remove']('x2');
   });
 }
 window.route = state => { //console.log({state});

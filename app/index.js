@@ -1,4 +1,6 @@
-//window.addEventListener("popstate", e => (e.state ? e.state.router({pop:true}) : null));
+
+window.addEventListener("popstate", e => (e.state ? e.state.router({pop:true}) : null));
+
 window.mvc = { };
 
 function init() {
