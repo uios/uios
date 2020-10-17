@@ -3,4 +3,16 @@ window.global = {
     time: 0
 }
 
-window.mvc = { m: {}, v:{}, c:{} };
+window.mvc = { 
+    m: { }, 
+    v: { }, 
+    c: { }
+};
+
+window.on = {
+    touch: { 
+        drag: { },
+        hold: { },
+        tap: { }
+    }
+};

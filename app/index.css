@@ -3,7 +3,7 @@
 .body-aside {width: 100%;height: 100%;color: #fff;z-index: 12;position: absolute;}
 .body-aside .lock {width: 50px;height: 50px;line-height: 50px;position: absolute;top: 0;right: 0;text-align: center;}
 .body-aside .lock:before { content: '\1F512'; line-height: 50px; text-align: center; color: white; }
-.body-aside > * {width: 100%;height: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
+.body-aside > * {width: 100%;height: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 0;}
 
 .body-aside .splash { transition: 1s opacity, 1s transform; }
 .body:not([data-path="/"]) .body-aside .splash { opacity: 0; transform: translate3d(0,-100%,0); }
@@ -11,25 +11,30 @@
 .body-aside .splash .clock .time { font-size: 48px; }
 .body-aside .splash .clock .date { font-size: 24px; }
 
-.body[data-path="/my/"] .body-aside .signin {opacity: 1;display: flex;display: -webkit-flex;justify-content: center;align-items: center;}
+.body[data-page="/my/"] .body-aside .signin {opacity: 1;display: flex;display: -webkit-flex;justify-content: center;align-items: center;z-index: 1;}
 .body-aside .signin {opacity: 0;transition: 1s opacity;display: flex;display: -webkit-flex;justify-content: center;align-items: center;/* display: none; */}
 .body-aside .signin .my-page {display: block;width: 300px;min-height: auto;border-radius: 20px;}
 .body-aside .signin .my-page form {width: 100%;margin-bottom: 36px;}
 .body-aside .signin .my-page form .input {position: relative;width: 100%;height: 36px;background: transparent;border: 1px solid #fff;border-radius:5px;margin-bottom: 10px;}
 .body-aside .signin .my-page form .input:last-child { margin-bottom: 0; }
+.body-aside .signin .my-page form input::placeholder { color: #fff; opacity: 0.5 }
 .body-aside .signin .my-page form .input input[type="email"] {padding: 0 10px;width: calc(100% - 0px);color: #fff;}
 .body-aside .signin .my-page form .input input[type="password"] {padding: 0 0 0 10px;width: calc(100% - 36px);color: #fff;}
 .body-aside .signin .my-page form div > * {display:block;position: absolute;height: 36px;}
 .body-aside .signin .my-page form div [type="submit"] {right: 0;width: 36px;background-image: url(/svg/key.svg); background-size: 20px; background-position: center; background-repeat: no-repeat; filter: invert(1);}
-.body-aside .signin .connect { border: 1px solid #fff; height: 36px; line-height: 36px; margin: 0 auto 10px; border-radius: 5px; text-align: center; }
-.body-aside .signin .connect:before {content: '';width: 20px;height: 20px;display: inline-block;margin: 8px;background-size: contain;}
+.body-aside .signin .connect {border: 1px solid #fff;height: 36px;line-height: 36px;margin: 0 auto 10px;border-radius: 5px;text-align: center;position: relative;font-size: 13px;}
+.body-aside .signin .connect:before,
+.body-aside .signin .signup:before {content: '';width: 20px;height: 20px;display: inline-block;margin: 8px;background-size: contain;position: absolute;left: 0;}
 .body-aside .signin .connect:after {width: calc(100% - 36px);height: 36px;display: inline-block;vertical-align: top;}
 .body-aside .signin .connect.google:before { background-image: url(/svg/google.svg); filter: invert(1); }
 .body-aside .signin .connect.guests:before { background-image: url(/svg/fedora.svg); filter: invert(1); }
+.body-aside .signin .signup {position:relative;height: 36px;line-height: 36px;margin: 36px 0 auto;border-radius: 5px;text-align: center;font-weight: bolder;font-size: 13px;}
+.body-aside .signin .signup:before { background-image: url(/svg/email.svg); filter: invert(1); }
 
+.body[data-page="/my/account/"] .body-aside .signup {opacity: 1;display: flex;display: -webkit-flex;justify-content: center;align-items: center;z-index: 1;}
 
 .desktop {position:absolute;width: 100%;height: 100%;color: #fff;top: 0;left: 0;right: 0;bottom: 0;z-index: 0;z-index: 0;overflow-y: hidden;opacity: 0;transition: 1s opacity;}
-.body:not([data-page="/"]):not([data-page="/my/"]) .desktop {z-index: 123;opacity: 1;}
+.body:not([data-page="/"]):not([data-root="my"]) .desktop {z-index: 123;opacity: 1;}
 .desktop .apps {display: flex;flex-direction: column;flex-wrap: wrap;align-content: flex-start;justify-content: unset;height: calc(100% - 60px);position: relative;top: 0;left: 0;right: 0;bottom: 0;padding: 10px;overflow-y: hidden;}
 .desktop .apps .ico {width: 60px;margin: 0 20px 20px 0;font-size: 13px;text-align: center;}
 .desktop .apps .ico:last-child { margin-right: 10px; }

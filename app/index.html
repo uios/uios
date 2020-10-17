@@ -27,11 +27,13 @@
     <script async src='/js/auth.js'></script>
     <script async src='/js/api.js'></script>
     <script async src='/js/mvc.js'></script>
-    <script async src='/js/on.js'></script>
+    <script async src='/js/on.submit.js'></script>
+    <script async src='/js/on.touch.tap.js'></script>
     <script async src='/js/router.js'></script>
+    <script async src='/js/view.js'></script>
   </head><!--
 
-  --><body class="body" onload="init(window.location.pathname+window.location.hash)" data-page="/" data-path="/"><!--
+  --><body class="body" onclick="on.touch.tap(event,'tap')" onload="init(window.location.pathname+window.location.hash)" data-page="/" data-path="/"><!--
 
     --><noscript>
       <div>Javascript Required</div>
@@ -48,9 +50,11 @@
 
     --><div class="boot"></div><!--
 
+    ASIDE
     --><aside class='body-aside gradient-rgb' id='body-aside'><!--
+
       --><section class='signin'><!--
-      --><div class="lock" onclick="'/'.router()"></div><!--
+        --><div class="lock" data-href="/"></div><!--
         --><div class='my-page'><!--
           --><div></div><!--
           --><form onsubmit="on.submit.auth(event);"><!--
@@ -58,19 +62,27 @@
             --><div class="input"><input placeholder="Password" type="password"><input type="submit" value=""></div><!--
           --></form><!--
           --><div class="connect google" data-after="Continue with Google"></div><!--
-          --><div class="connect guests" data-after="Continue as Guest" onclick="'/desktop/'.router()"></div><!--
+          --><div class="connect guests" data-after="Continue as Guest" data-href="/desktop/"></div><!--
+          --><div class="signup" data-after="Signup with Email" data-href="/my/account/"></div><!--
         --></div><!--
       --></section><!--
+
+      --><section class='signup'><!--
+      --></section><!--
+      
       --><section id="splash" class="splash" onclick="'/my/'.router()"><!--
         --><div id='clock' class='clock'><!--
           --><header id='time' class='time'>12:00</header><!--
           --><footer id='date' class='date'>January 1, 1970</footer><!--
         --></div><!--
       --></section><!--
+
     --></aside><!--
 
-    --><main id='desktop' class='desktop blur' onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'>
-      <section class="apps">
+    DESKTOP
+    --><main id='desktop' class='desktop blur' data-evt="desktop" onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'>
+
+      <section class="apps" id="apps">
         <div class="app ico" data-after="Account" data-app="account"><a></a></div>
         <div class="app ico" data-after="Arcade" data-app="arcade"><a></a></div>
         <div class="app ico" data-after="Build" data-app="build"><a></a></div>
@@ -91,7 +103,8 @@
         <div class="app ico" data-after="Weather" data-app="weather"><a></a></div>
         <div class="app ico" data-after="Words" data-app="words"><a></a></div>    
       </section>
-      <footer id='taskbar' class='taskbar'>
+
+      <footer class='taskbar' id='taskbar'>
         <section id='start-menu' class='start-menu'>
           <header id='access' class='access'>
              <div id='fullscreen' class='fullscreen'></div>
@@ -109,6 +122,7 @@
           <div id='task-manager' class='task-manager'></div>
         </section>
       </footer>
+
     </main><!--
 
   --></body><!--
