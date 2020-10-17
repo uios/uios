@@ -18,8 +18,7 @@ String.prototype.router = function(a, b=a ? a : {}, pop=b.pop ? b.pop : null, pa
 
           if(root) { document.body.dataset.root = root; } 
           else { document.body.removeAttribute('data-root'); }
-
-          //console.log({paths},global.ppp, paths.page);
+          
           if(global.ppp.includes(paths.page)) {
             document.body.dataset.ppp = paths.page;
             document.body.dataset.url = paths.path;
