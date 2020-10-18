@@ -12,12 +12,12 @@
     <meta name='theme-color' content='#021025'>
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="47824486713-n6bf613gpdk21i0qmvl8fulv1v6s4iru.apps.googleusercontent.com">
-    <link rel='shortcut icon' href='/coder.ico'>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/png/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/png/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/png/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="/svg/safari-pinned-tab.svg" color="#5bbad5">
     <link async rel="stylesheet" href="/index.css" media="all">
     <script src='/js/firebase-app.js'></script>
     <script src='/js/firebase-auth.js'></script>  
@@ -83,7 +83,6 @@
     --><main id='desktop' class='desktop blur' data-evt="desktop" onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'>
 
       <section class="apps" id="apps">
-        <div class="app ico" data-after="Account" data-app="account"><a></a></div>
         <div class="app ico" data-after="Arcade" data-app="arcade"><a></a></div>
         <div class="app ico" data-after="Build" data-app="build"><a></a></div>
         <div class="app ico" data-after="Camera" data-app="camera"><a></a></div>    
@@ -93,34 +92,28 @@
         <div class="app ico" data-after="Library" data-app="library"><a></a></div>
         <div class="app ico" data-after="Market" data-app="market"><a></a></div>
         <div class="app ico" data-after="Media" data-app="media"><a></a></div>    
-        <div class="app ico" data-after="Notes" data-app="notes"><a></a></div>        
-        <div class="app ico" data-after="Office" data-app="office"><a></a></div>        
-        <div class="app ico" data-after="Pages" data-app="pages"><a></a></div>
+        <div class="app ico" data-after="Notes" data-app="notes"><a></a></div>
         <div class="app ico" data-after="Talk" data-app="talk"><a></a></div>
         <div class="app ico" data-after="Jukebox" data-app="jukebox"><a></a></div>
         <div class="app ico" data-after="Gallery" data-app="gallery"><a></a></div>
         <div class="app ico" data-after="Recorder" data-app="recorder"><a></a></div>
         <div class="app ico" data-after="Weather" data-app="weather"><a></a></div>
-        <div class="app ico" data-after="Words" data-app="words"><a></a></div>    
+        <div class="app ico" data-after="Pages" data-app="pages"><a></a></div>    
       </section>
 
       <footer class='taskbar' id='taskbar'>
         <section id='start-menu' class='start-menu'>
-          <header id='access' class='access'>
+          <form class="search" id="search"></form>
+          <nav id='access' class='access'>
              <div id='fullscreen' class='fullscreen'></div>
              <div id='avatar' class='avatar'></div>
              <div id='explorer' class='explorer'></div>
              <div id='settings' class='settings'></div>
              <div id='power' class='power'></div>
-          </header>
-          <section class='apps' id='apps' onclick='openApp(event.target.dataset.app)'></section>
-          <form class="search" id="search"></form>
+          </nav>
+          <section class='apps' id='apps'></section>
         </section>
-        <section onclick="'/my/'.router();">
-          <div id='start-button' class='start-button'></div>
-          <div id='tasks' class='tasks' onclick='event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null'></div>
-          <div id='task-manager' class='task-manager'></div>
-        </section>
+        <section class="me" data-href="/my/account/"></section>
       </footer>
 
     </main><!--
