@@ -24,12 +24,12 @@
 .body-aside .signin .my-page form div [type="submit"] {right: 0;width: 36px;background-image: url(/svg/key.svg); background-size: 20px; background-position: center; background-repeat: no-repeat; filter: invert(1);}
 .body-aside .signin .connect {border: 1px solid #fff;height: 36px;line-height: 36px;margin: 0 auto 10px;border-radius: 5px;text-align: center;position: relative;font-size: 13px;}
 .body-aside .signin .connect:before,
-.body-aside .signin .signup:before {content: '';width: 20px;height: 20px;display: inline-block;margin: 8px;background-size: contain;position: absolute;left: 0;}
+.body-aside .signin .signup:before {content: '';width: 20px;height: 20px;display: inline-block;vertical-align: top;margin: 8px;background-size: contain;position: absolute;left: 0;}
 .body-aside .signin .connect:after {width: calc(100% - 36px);height: 36px;display: inline-block;vertical-align: top;}
 .body-aside .signin .connect.google:before { background-image: url(/svg/google.svg); filter: invert(1); }
 .body-aside .signin .connect.guests:before { background-image: url(/svg/fedora.svg); filter: invert(1); }
-.body-aside .signin .signup {position:relative;height: 36px;line-height: 36px;margin: 36px 0 auto;border-radius: 5px;text-align: center;font-weight: bolder;font-size: 13px;}
-.body-aside .signin .signup:before { background-image: url(/svg/email.svg); filter: invert(1); }
+.body-aside .signin .signup {position:relative;height: 36px;line-height: 36px;margin: 36px 0 auto;border-radius: 5px;text-align: center;color: #333;font-size: 13px;background: white;}
+.body-aside .signin .signup:before {background-image: url(/svg/email.svg);/* filter: invert(1); */opacity: calc(2/3);}
 
 .body[data-page="/my/account/"] .body-aside .signup {opacity: 1;display: flex;display: -webkit-flex;justify-content: center;align-items: center;z-index: 1;}
 
