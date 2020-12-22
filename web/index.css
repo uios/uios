@@ -82,8 +82,12 @@
 
 
 .desktop .taskbar {display: flex;flex-direction: row;width: 100%;height: 50px;position: absolute;left: 0;right: 0;bottom: 0;justify-content: space-between;}
-.desktop .taskbar .start-menu {width: 50px;height: 50px;filter: invert(1);background-image: url(/svg/search.svg);background-size: 20px;background-position: center;background-repeat: no-repeat;}
-.desktop .taskbar .start-menu > * { display: none; }
+.desktop .taskbar .start-menu {width: auto;height: 50px;}
+.desktop .taskbar .start-menu .search {width: 320px;height: 50px;}
+.desktop .taskbar .start-menu .search:before {content: '';display: inline-block;vertical-align: top;width: 50px;height: 50px;filter: invert(1);background-image: url(/svg/search.svg);background-size: 20px;background-position: center;background-repeat: no-repeat;}
+.desktop .taskbar .start-menu .search [type="text"] {width: calc(100% - 50px);height: 50px;display: inline-block;vertical-align: top;font-size: 18px;color: white;}
+.desktop .taskbar .start-menu .search [type="text"]::placeholder { color: white; }
+.desktop .taskbar .start-menu .search [type="submit"] { display: none; }
 .desktop .taskbar .start-menu + section {width: 50px;height: 50px;filter: invert(1);background-image: url(/svg/user.svg);background-size: 24px;background-position: center;background-repeat: no-repeat;}
 
 
