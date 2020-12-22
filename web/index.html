@@ -101,20 +101,20 @@
         <div class="app ico" data-after="Pages" data-app="pages"><a></a></div>    
       </section>
 
-      <footer class='taskbar' id='taskbar'>
-        <section id='start-menu' class='start-menu'>
-          <form class="search" id="search"><input placeholder="Search Apps" type="text"><input type="submit"></form>
+      <section id='start-menu' class='start'>        
+        <div class="menu">
           <nav id='access' class='access'>
-             <div id='fullscreen' class='fullscreen'></div>
-             <div id='avatar' class='avatar'></div>
-             <div id='explorer' class='explorer'></div>
-             <div id='settings' class='settings'></div>
-             <div id='power' class='power'></div>
+            <div id='fullscreen' class='fullscreen'></div>
+            <div id='avatar' class='avatar'></div>
+            <div id='explorer' class='explorer'></div>
+            <div id='settings' class='settings'></div>
+            <div id='power' class='power'></div>
           </nav>
           <section class='apps' id='apps'></section>
-        </section>
-        <section class="me" data-href="/my/"></section>
-      </footer>
+        </div>
+        <form class="search" id="search"><div class="icon" onclick="$(event.target.closest('#start-menu')).toggleClass('menu')"></div><input placeholder="Search Apps" type="text"><input type="submit"></form>
+      </section>
+      <section class="me" data-href="/my/"></section>
 
     </main><!--
 

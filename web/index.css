@@ -35,7 +35,7 @@
 
 .desktop {position:absolute;width: 100%;height: 100%;color: #fff;top: 0;left: 0;right: 0;bottom: 0;z-index: 0;z-index: 0;overflow-y: hidden;opacity: 0;transition: 1s opacity;}
 .body:not([data-page="/"]):not([data-root="my"]) .desktop {z-index: 123;opacity: 1;}
-.desktop .apps {display: flex;flex-direction: column;flex-wrap: wrap;align-content: flex-start;justify-content: unset;height: calc(100% - 60px);position: relative;top: 0;left: 0;right: 0;bottom: 0;padding: 10px;overflow-y: hidden;}
+.desktop > .apps {display: inline-flex;flex-direction: column;flex-wrap: wrap;align-content: flex-start;justify-content: unset;width: calc(100% - 50px);height: calc(100% - 70px);position: relative;top: 0;left: 0;right: 0;bottom: 0;padding: 10px;overflow-y: hidden;}
 .desktop .apps .ico {width: 60px;margin: 0 20px 20px 0;font-size: 13px;text-align: center;}
 .desktop .apps .ico:last-child { margin-right: 10px; }
 .desktop .apps .ico a {padding-top: 100%;width: 100%;height: 0;margin-bottom: 5px;border-radius: 10px;display: block;background-repeat:no-repeat;background-position: center;position: relative;}
@@ -80,15 +80,18 @@
 .desktop .apps .ico[data-app="words"] a:after {background-image: url(/apps/words/svg/icon.svg);background-size: 50%;z-index: 1;filter: invert(1);}
 .desktop .apps .ico[data-app="words"] a:before {background: linear-gradient(to top, #727dbb, #50c1de);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
 
-
-.desktop .taskbar {display: flex;flex-direction: row;width: 100%;height: 50px;position: absolute;left: 0;right: 0;bottom: 0;justify-content: space-between;}
-.desktop .taskbar .start-menu {width: auto;height: 50px;}
-.desktop .taskbar .start-menu .search {width: 320px;height: 50px;}
-.desktop .taskbar .start-menu .search:before {content: '';display: inline-block;vertical-align: top;width: 50px;height: 50px;filter: invert(1);background-image: url(/svg/search.svg);background-size: 20px;background-position: center;background-repeat: no-repeat;}
-.desktop .taskbar .start-menu .search [type="text"] {width: calc(100% - 50px);height: 50px;display: inline-block;vertical-align: top;font-size: 18px;color: white;}
-.desktop .taskbar .start-menu .search [type="text"]::placeholder { color: white; }
-.desktop .taskbar .start-menu .search [type="submit"] { display: none; }
-.desktop .taskbar .start-menu + section {width: 50px;height: 50px;filter: invert(1);background-image: url(/svg/user.svg);background-size: 24px;background-position: center;background-repeat: no-repeat;}
+.desktop .start {width: 270px;height: 50px;max-width: calc(100% - 50px);position: fixed;left: 0;bottom: 0;z-index: 12;transition: 0.3s height;}
+.desktop .start.menu {height: 300px;background-color: rgba(0,0,0,0.5);backdrop-filter: -webkit-blur(10px);backdrop-filter: blur(10px);}
+.desktop .start .menu {width: 100%;height: calc(100% - 50px);overflow: hidden;}
+.desktop .start.menu .menu {}
+.desktop .start .menu .access {width: 50px;height: 100%;display: inline-block;}
+.desktop .start .menu .access > * { width: 50px; height: 50px; background: red; }
+.desktop .start .search {width: 100%;height: 50px;position: absolute;bottom: 0;}
+.desktop .start .search > :first-child {content: '';display: inline-block;vertical-align: top;width: 50px;height: 50px;filter: invert(1);background-image: url(/svg/search.svg);background-size: 20px;background-position: center;background-repeat: no-repeat;}
+.desktop .start .search [type="text"] {width: calc(100% - 50px);height: 50px;display: inline-block;vertical-align: top;font-size: 18px;color: white;}
+.desktop .start .search [type="text"]::placeholder { color: white; }
+.desktop .start .search [type="submit"] { display: none; }
+.desktop .me {width: 50px;height: 50px;right: 0;bottom: 0;z-index: 1;filter: invert(1);position: fixed;background-image: url(/svg/user.svg);background-size: 24px;background-position: center;background-repeat: no-repeat;}
 
 
 /**/
