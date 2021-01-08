@@ -84,7 +84,7 @@
 
 .desktop .start {width: 270px;height: 50px;max-width: calc(100% - 50px);position: fixed;left: 0;bottom: 0;z-index: 12;transition: 0.3s height;}
 .desktop .start.menu {height: 375px;height: 100%;max-height: 480px;/* background-color: rgba(0,0,0,0.5); */backdrop-filter: -webkit-blur(10px);/* backdrop-filter: blur(10px); */}
-.desktop.blur:before {content: '';display: block;position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.5);backdrop-filter: blur(10px);top: 0;left: 0;z-index: 12;}
+.desktop.blur:before {content: '';display: block;position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.5);backdrop-filter: -webkit-blur(10px);backdrop-filter: blur(10px);top: 0;left: 0;z-index: 12;}
 .desktop.blur > .apps { filter: blur(10px); }
 .desktop .start .menu {width: 100%;height: calc(100% - 50px);overflow: hidden;}
 .desktop .start.menu .menu {}
