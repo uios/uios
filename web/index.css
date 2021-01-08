@@ -80,14 +80,16 @@
 .apps .ico[data-app="words"] a:after {background-image: url(/apps/words/svg/icon.svg);background-size: 50%;z-index: 1;filter: invert(1);}
 .apps .ico[data-app="words"] a:before {background: linear-gradient(to top, #727dbb, #50c1de);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
 
-.apps .app a {width: 30px;height: 30px;display: inline-block;background-color: #bbb;vertical-align: middle;border-radius: 15%;margin: 10px;}
+.apps .app a {width: 30px;height: 30px;display: inline-block;background-color: #bbb;vertical-align: middle;border-radius: 15%;margin: 10px 10px 10px 10px;}
 
 .desktop .start {width: 270px;height: 50px;max-width: calc(100% - 50px);position: fixed;left: 0;bottom: 0;z-index: 12;transition: 0.3s height;}
-.desktop .start.menu {height: 375px;background-color: rgba(0,0,0,0.5);backdrop-filter: -webkit-blur(10px);backdrop-filter: blur(10px);}
+.desktop .start.menu {height: 375px;height: 100%;max-height: 480px;/* background-color: rgba(0,0,0,0.5); */backdrop-filter: -webkit-blur(10px);/* backdrop-filter: blur(10px); */}
+.desktop.blur:before {content: '';display: block;position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.5);backdrop-filter: blur(10px);top: 0;left: 0;z-index: 12;}
+.desktop.blur > .apps { filter: blur(10px); }
 .desktop .start .menu {width: 100%;height: calc(100% - 50px);overflow: hidden;}
 .desktop .start.menu .menu {}
 .desktop .start .menu .access {width: 50px;height: 100%;display: -webkit-inline-flex;flex-direction: column;vertical-align: top;}
-.desktop .start .menu .access > * { width: 50px; height: 50px; background-size: 20px; background-repeat: no-repeat; }
+.desktop .start .menu .access > * {width: 50px;height: 50px;background-size: 30px;background-repeat: no-repeat;background-position: center;}
 .desktop .start .menu .access .fullscreen {/* display: -webkit-flex; *//* justify-content: center; *//* align-items: center; */}
 .desktop .start .menu .access .fullscreen > div {width: 30px;height: 30px;margin: 10px;}
 .desktop .start .menu .access .fullscreen div > div {width: 10px;height: 10px;display: inline-block;/* margin: 2px; */}
@@ -96,9 +98,11 @@
 .desktop .start .menu .access .fullscreen div > div:nth-child(3) {border-left: 2px solid white;border-bottom: 2px solid white;margin-top: 3px;margin-right: 3px;}
 .desktop .start .menu .access .fullscreen div > div:nth-child(4) {border-right: 2px solid white;border-bottom: 2px solid white;margin-top: 3px;margin-left: 3px;}
 .desktop .start .menu .access > .power { margin-top: auto; background-image: url(/cdn/svg/power.svg); } 
+.desktop .start .menu .access > .explorer {background-image: url(/cdn/svg/explorer.svg);filter: invert(1);} 
+.desktop .start .menu .access > .settings {background-image: url(/cdn/svg/settings.svg);filter: invert(1);} 
 .desktop .start .search {width: 100%;height: 50px;position: absolute;bottom: 0;}
 .desktop .start .search > :first-child {content: '';display: inline-block;vertical-align: top;width: 50px;height: 50px;filter: invert(1);background-image: url(/cdn/svg/search.svg);background-size: 20px;background-position: center;background-repeat: no-repeat;}
-.desktop .start .search [type="text"] {width: calc(100% - 50px);height: 50px;display: inline-block;vertical-align: top;font-size: 18px;color: white;}
+.desktop .start .search [type="text"] {width: calc(100% - 50px);height: 50px;display: inline-block;vertical-align: top;font-size: 18px;color: white;text-indent: 10px;}
 .desktop .start .search [type="text"]::placeholder { color: white; }
 .desktop .start .search [type="submit"] { display: none; }
 .desktop .me {width: 50px;height: 50px;right: 0;bottom: 0;z-index: 1;filter: invert(1);position: fixed;background-image: url(/cdn/svg/user.svg);background-size: 24px;background-position: center;background-repeat: no-repeat;}
@@ -119,3 +123,8 @@ input {appearance: none;padding: 0;border: 0;background: transparent;}
 input:focus { -webkit-appearance: none; border: 0; outline: 0; }
 [data-before]:before { content: attr(data-before); }
 [data-after]:after { content: attr(data-after); }
+
+::-webkit-scrollbar { width: 0; height: 0; }
+:hover::-webkit-scrollbar {width: 12px;}
+:hover::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); border-radius: 10px;} 
+:hover::-webkit-scrollbar-thumb {border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);}

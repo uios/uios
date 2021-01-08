@@ -15,12 +15,13 @@ window.on['touch']["tap"] = (ev,t) => {
 
     if(a) { a.dataset.href.router(); }
     else {
-        if(evt === 'desktop') {
+        if(evt === 'apps') {
             event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null;
         }
         if(evt === 'search') {
             if(className === 'icon') {
-                $(event.target.closest('#start-menu')).toggleClass('menu')                
+                $(event.target.closest('#start-menu')).toggleClass('menu');
+                $(byId('desktop')).toggleClass('blur');
             }
         }
         if(evt === 'splash') {
