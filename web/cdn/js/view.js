@@ -35,9 +35,17 @@ function view(paths) {
       }   
         
       if(root === 'desktop') {
-        if(get.length>1) {
-        } else {
-          mvc.v.page.my.desktop(auth.user()).then(resolve(paths));
+        if(get.length > 1) {
+          if(get[1] === "search") {
+            byId('start-menu').classList.add('menu');
+            byId('desktop').classList.add('blur');
+            resolve(paths);
+          }
+        } 
+        else {
+          byId('start-menu').classList.remove('menu');
+          byId('desktop').classList.remove('blur');
+          resolve(paths);    
         }
       }   
       

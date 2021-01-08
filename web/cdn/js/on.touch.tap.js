@@ -20,8 +20,13 @@ window.on['touch']["tap"] = (ev,t) => {
         }
         if(evt === 'search') {
             if(className === 'icon') {
-                $(event.target.closest('#start-menu')).toggleClass('menu');
-                $(byId('desktop')).toggleClass('blur');
+                if(GET[0] === 'desktop') {
+                    if(GET[1] === 'search') {
+                        '/desktop/'.router();
+                    } else {
+                        '/desktop/search/'.router();
+                    }
+                }
             }
         }
         if(evt === 'splash') {
