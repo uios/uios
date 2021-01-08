@@ -83,7 +83,7 @@
 .apps .app a {width: 30px;height: 30px;display: inline-block;background-color: #bbb;vertical-align: middle;border-radius: 15%;margin: 10px 10px 10px 10px;}
 
 .desktop .start {width: 270px;height: 50px;max-width: calc(100% - 50px);position: fixed;left: 0;bottom: 0;z-index: 12;transition: 0.3s height;}
-.desktop .start.menu {height: 375px;height: 100%;max-height: 480px;/* background-color: rgba(0,0,0,0.5); */backdrop-filter: -webkit-blur(10px);/* backdrop-filter: blur(10px); */}
+.desktop .start.menu {height: 375px;height: 100%;max-height: 568px;/* background-color: rgba(0,0,0,0.5); */backdrop-filter: -webkit-blur(10px);/* backdrop-filter: blur(10px); */}
 .desktop.blur:before {content: '';display: block;position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.5);backdrop-filter: -webkit-blur(10px);backdrop-filter: blur(10px);top: 0;left: 0;z-index: 12;}
 .desktop.blur > .apps { filter: blur(10px); }
 .desktop .start .menu {width: 100%;height: calc(100% - 50px);overflow: hidden;}
@@ -97,17 +97,20 @@
 .desktop .start .menu .access .fullscreen div > div:nth-child(2) {border-top: 2px solid white;border-right: 2px solid white;margin-left: 3px;margin-bottom: 3px;}
 .desktop .start .menu .access .fullscreen div > div:nth-child(3) {border-left: 2px solid white;border-bottom: 2px solid white;margin-top: 3px;margin-right: 3px;}
 .desktop .start .menu .access .fullscreen div > div:nth-child(4) {border-right: 2px solid white;border-bottom: 2px solid white;margin-top: 3px;margin-left: 3px;}
-.desktop .start .menu .access > .power {margin-top: auto;background-image: url(/cdn/svg/power.svg);filter: invert(1);} 
+.desktop .start .menu .access > .me {margin-top: auto;background-image: url(/cdn/svg/user.svg);filter: invert(1);} 
 .desktop .start .menu .access > .explorer {background-image: url(/cdn/svg/explorer.svg);filter: invert(1);} 
 .desktop .start .menu .access > .settings {background-image: url(/cdn/svg/settings.svg);filter: invert(1);} 
 .desktop .start .search {width: 100%;height: 50px;position: absolute;bottom: 0;}
 .desktop .start .search > :first-child {content: '';display: inline-block;vertical-align: top;width: 50px;height: 50px;filter: invert(1);background-image: url(/cdn/svg/search.svg);background-size: 20px;background-position: center;background-repeat: no-repeat;}
+.desktop .start.menu .search > :first-child {background-image: url(/cdn/svg/x.svg);}
 .desktop .start .search [type="text"] {width: calc(100% - 50px);height: 50px;display: inline-block;vertical-align: top;font-size: 18px;color: white;text-indent: 10px;}
 .desktop .start .search [type="text"]::placeholder { color: white; }
 .desktop .start .search [type="submit"] { display: none; }
-.desktop .me {width: 50px;height: 50px;right: 0;bottom: 0;z-index: 1;filter: invert(1);position: fixed;background-image: url(/cdn/svg/user.svg);background-size: 24px;background-position: center;background-repeat: no-repeat;}
-
+.desktop .power {width: 50px;height: 50px;right: 0;bottom: 0;z-index: 1;filter: invert(1);position: fixed;background-image: url(/cdn/svg/power.svg);background-size: 24px;background-position: center;background-repeat: no-repeat;}
 .desktop .start .menu .apps {width: calc(100% - 50px);height: 100%;display: inline-block;vertical-align: top;overflow-x: hidden;}
+@media screen and (max-width: 480px) {
+    .desktop .start.menu {width: 100%;max-width: 100%;max-height: 100%;}
+}
 
 /**/
 .gradient-rgb {background: linear-gradient(-45deg, rgba(35,166,213,1) 25%, rgba(50,205,50,1) 50%, rgba(255,59,48,1) 75%);animation: gradient 15s infinite ease;background-size: 400% 400%;}
