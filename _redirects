@@ -4,6 +4,12 @@ https://arcade.uios.online/index.js /app/arcade/index.js 200
 https://arcade.uios.online/cdn/* /app/arcade/:splat 200
 https://arcade.uios.online/* /app/arcade/:splat 200
 
+https://notes.uios.online /app/notes/index.html 200
+https://notes.uios.online/index.css /app/notes/index.css 200
+https://notes.uios.online/index.js /app/notes/index.js 200
+https://notes.uios.online/cdn/* /app/notes/:splat 200
+https://notes.uios.online/* /app/notes/:splat 200
+
 https://uios.online /web/index.html 200
 https://uios.online/favicon.ico /web/favicon.ico 200
 https://uios.online/index.css /web/index.css 200
