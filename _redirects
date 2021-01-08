@@ -8,7 +8,7 @@ https://uios.online /web/index.html 200
 https://uios.online/favicon.ico /web/favicon.ico 200
 https://uios.online/index.css /web/index.css 200
 https://uios.online/index.js /web/index.js 200
-https://uios.online/manifest.json /web/manifest.icon 200
+https://uios.online/site.webmanifest /web/site.webmanifest 200
 https://uios.online/sw.js /web/sw.js 200
 https://uios.online/cdn/* /web/cdn/:splat 200
 https://uios.online/* /web/index.html 200
