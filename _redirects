@@ -11,4 +11,4 @@ https://uios.online/index.js /web/index.js 200
 https://uios.online/manifest.json /web/manifest.icon 200
 https://uios.online/sw.js /web/sw.js 200
 https://uios.online/cdn/* /web/cdn/:splat 200
-https://uios.online/* /web/index.html 200
+https://uios.online/* /web/:splat 200
