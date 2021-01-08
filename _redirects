@@ -1,10 +1,8 @@
 https://arcade.uios.online /app/arcade/index.html 200
-
-https://arcade.uios.online /app/arcade/index.html 200
 https://arcade.uios.online/index.css /app/arcade/index.css 200
 https://arcade.uios.online/index.js /app/arcade/index.js 200
 https://arcade.uios.online/cdn/* /app/arcade/:splat 200
-https://arcade.uios.online/* /app/arcade/index.html 200
+https://arcade.uios.online/* /app/arcade/:splat 200
 
 https://uios.online /web/index.html 200
 https://uios.online/favicon.ico /web/favicon.ico 200
