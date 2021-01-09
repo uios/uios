@@ -139,25 +139,20 @@ window.webcam = {
     },
     play: (paths) => {
         return new Promise((resolve, reject) => { //console.log(link,arrayRemove(link,""));
-            var video = byId('webcam');
-            var camera = video.closest('.camera-video');
+            var video = byId('video');
 
             if(window.width < window.height) { constraints = webcam.constraints.horizontal; }
             else { constraints = webcam.constraints.horizontal; }
 
             navigator.mediaDevices.getUserMedia(constraints).then(async stream => {
-                window.stream = stream;
                 var track = stream.getVideoTracks()[0];
                 video.srcObject = webcam.stream = stream;
-                video.onloadedmetadata = data => { console.log({video,track});
+                video.onloadedmetadata = data => {
                     var capabilities = track.getCapabilities(); console.log({capabilities});
                     if(capabilities.zoom) { }
                     if(capabilities.torch) { }
-                    //$(all('.io')).addClass('i').removeClass('o');
-                    dom.body.dataset.cam = true;
-                    lens.dataset.disabled = 'false';
-                    $(camera).addClass('playing')[0].find('video').play();
-                    dom.camera.dataset.mode = 'camera';
+                    dom.body.dataset.camera = "playing";
+                    dom.video.play();
                     resolve({paths});
                 }
             }).catch(err => {

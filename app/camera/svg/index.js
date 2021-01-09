@@ -1,5 +1,0 @@
-function init() {
-
-    webcam.play();
-    
-}

@@ -1,0 +1,1 @@
+window.byId = s => { return document.getElementById(s); }
