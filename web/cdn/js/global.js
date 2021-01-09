@@ -30,7 +30,7 @@ window.apps = {
         
     },
     "camera": {
-        "allow": "camera,microphone"
+        "allow": "camera;microphone"
     },
     "creator": {
         

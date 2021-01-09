@@ -1,0 +1,8 @@
+{
+    "allow": "camera;microphone",
+    "name": "Camera",
+    "size": {
+        "width": "360px",
+        "height": "780px"
+    }
+}
