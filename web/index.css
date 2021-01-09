@@ -1,6 +1,6 @@
 .body {font-family: Arial;overscroll-behavior-y: contain;-webkit-overscroll-behavior-y: contain;margin: 0;color: #777;color: #eee;width: 100%;height: 100%;position: relative;top: 0;left: 0;right: 0;bottom: 0;overflow: hidden;}
 
-.body-aside {width: 100%;height: 100%;color: #fff;z-index: 12;position: absolute;}
+.body-aside {width: 100%;height: 100%;color: #fff;z-index: 12;position: absolute;/* background-image: url(/cdn/gif/bg/code.gif) !important; *//* background-size: cover !important; *//* animation: unset !important; */}
 .body-aside .lock {width: 50px;height: 50px;line-height: 50px;position: absolute;top: 0;right: 0;text-align: center;}
 .body-aside .lock:before { content: '\1F512'; line-height: 50px; text-align: center; color: white; }
 .body-aside > * {width: 100%;height: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 0;}
@@ -83,9 +83,16 @@
 .start .apps .app > a {width: 30px;height: 30px;display: inline-block;background-color: #bbb;vertical-align: middle;border-radius: 15%;margin: 10px 10px 10px 10px;}
 
 .desktop > .apps .app {max-width: calc(100% - 40px);max-height: calc(100% - 40px);position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;background: rgba(0,0,0,0.5);backdrop-filter: blur(10px);backdrop-filter: -webkit-blur(10px);}
+@media screen and (max-width: 480px) { 
+    .desktop > .apps .app {max-width: calc(100% - 4px);max-height: calc(100% - 4px);}
+}
+
 .desktop > .apps .app header { display: flex; display: -webkit-flex; width: 100%; height: 100%; }
 .desktop > .apps .app header > :first-child { height: 36px; line-height: 36px; padding: 0 10px; }
-.desktop > .apps .app header .actions { height: 36px; }
+.desktop > .apps .app header .actions {height: 36px;width: 144px;margin-left: auto;}
+.desktop > .apps .app header .actions > * {width: 36px;height: 36px;display: inline-block;vertical-align: top;position: relative;}
+.desktop > .apps .app header .actions > .mini:before {content:'';display: block;width: 14px;height: 2px;margin: auto;background: #bbb;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
+.desktop > .apps .app header .actions > .maxi:before {content:'';display: block;width: 10px;height: 10px;margin: auto;border:2px solid #bbb;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
 .desktop > .apps .app iframe {width: calc(100% - 4px);height: calc(100% - 38px);border: 0;position: absolute;top: 36px;left: 0;right: 0;margin: auto;background: #1a1a1a;}
 
 .desktop .start {width: 270px;height: 50px;max-width: calc(100% - 50px);position: fixed;left: 0;bottom: 0;z-index: 12;transition: 0.3s height;}
