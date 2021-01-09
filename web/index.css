@@ -89,10 +89,12 @@
 
 .desktop > .apps .app header { display: flex; display: -webkit-flex; width: 100%; height: 100%; }
 .desktop > .apps .app header > :first-child { height: 36px; line-height: 36px; padding: 0 10px; }
-.desktop > .apps .app header .actions {height: 36px;width: 144px;margin-left: auto;}
+.desktop > .apps .app header .actions {height: 36px;width: 108px;margin-left: auto;}
 .desktop > .apps .app header .actions > * {width: 36px;height: 36px;display: inline-block;vertical-align: top;position: relative;}
 .desktop > .apps .app header .actions > .mini:before {content:'';display: block;width: 14px;height: 2px;margin: auto;background: #bbb;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
 .desktop > .apps .app header .actions > .maxi:before {content:'';display: block;width: 10px;height: 10px;margin: auto;border:2px solid #bbb;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
+.desktop > .apps .app header .actions > .exit:before {content:'';display: block;width: 18px;height: 2px;margin: auto;background: #bbb;position: absolute;top: 0;left: 0;right: 0;bottom: 0;transform: rotate(45deg);}
+.desktop > .apps .app header .actions > .exit:after {content:'';display: block;width: 18px;height: 2px;margin: auto;background: #bbb;position: absolute;top: 0;left: 0;right: 0;bottom: 0;transform: rotate(130deg);}
 .desktop > .apps .app iframe {width: calc(100% - 4px);height: calc(100% - 38px);border: 0;position: absolute;top: 36px;left: 0;right: 0;margin: auto;background: #1a1a1a;}
 
 .desktop .start {width: 270px;height: 50px;max-width: calc(100% - 50px);position: fixed;left: 0;bottom: 0;z-index: 12;transition: 0.3s height;}

@@ -16,7 +16,12 @@ window.on['touch']["tap"] = (ev,t) => {
     if(a) { a.dataset.href.router(); }
     else {
         if(evt === 'apps') {
-            event.target.closest('[data-app]') ? ("/desktop/apps/"+event.target.closest('[data-app]').dataset.app+"/").router() : null;
+            if(event.target.closest('[data-app]')) { 
+                ("/desktop/apps/"+event.target.closest('[data-app]').dataset.app+"/").router();
+            }
+        }
+        if(evt === 'app') {
+            if(className === 'exit') { elem.remove(); }
         }
         if(evt === 'search') {
             if(className === 'icon') {
