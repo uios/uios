@@ -35,7 +35,7 @@
 
 .desktop {position:absolute;width: 100%;height: 100%;color: #fff;top: 0;left: 0;right: 0;bottom: 0;z-index: 0;z-index: 0;overflow-y: hidden;opacity: 0;transition: 1s opacity;}
 .body:not([data-page="/"]):not([data-root="my"]) .desktop {z-index: 123;opacity: 1;}
-.desktop > .apps {display: inline-flex;flex-direction: column;flex-wrap: wrap;align-content: flex-start;justify-content: unset;width: calc(100% - 50px);height: calc(100% - 70px);position: relative;top: 0;left: 0;right: 0;bottom: 0;padding: 10px;overflow-y: hidden;}
+.desktop > .apps {display: inline-flex;flex-direction: column;flex-wrap: wrap;align-content: flex-start;justify-content: unset;width: calc(100% - 20px);height: calc(100% - 70px);position: relative;top: 0;left: 0;right: 0;bottom: 0;padding: 10px;overflow-y: hidden;}
 .apps .ico {width: 60px;margin: 0 20px 20px 0;font-size: 13px;text-align: center;}
 .apps .ico:last-child { margin-right: 10px; }
 .apps .ico a {padding-top: 100%;width: 100%;height: 0;margin-bottom: 5px;border-radius: 10px;display: block;background-repeat:no-repeat;background-position: center;position: relative;}
@@ -81,6 +81,9 @@
 .apps .ico[data-app="words"] a:before {background: linear-gradient(to top, #727dbb, #50c1de);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
 
 .apps .app a {width: 30px;height: 30px;display: inline-block;background-color: #bbb;vertical-align: middle;border-radius: 15%;margin: 10px 10px 10px 10px;}
+
+.desktop > .apps .app {width: calc(100% - 20px);height: calc(100% - 20px);position: absolute;background: rgba(0,0,0,0.5);backdrop-filter: blur(10px);backdrop-filter: -webkit-blur(10px);}
+.desktop > .apps .app iframe {width: calc(100% - 4px);height: calc(100% - 38px);border: 0;position: absolute;top: 36px;left: 0;right: 0;margin: auto;}
 
 .desktop .start {width: 270px;height: 50px;max-width: calc(100% - 50px);position: fixed;left: 0;bottom: 0;z-index: 12;transition: 0.3s height;}
 .desktop .start.menu {height: 375px;height: 100%;max-height: 568px;/* background-color: rgba(0,0,0,0.5); */backdrop-filter: -webkit-blur(10px);/* backdrop-filter: blur(10px); */}

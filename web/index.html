@@ -27,6 +27,7 @@
     <script async src='/cdn/js/auth.js'></script>
     <script async src='/cdn/js/api.js'></script>
     <script async src='/cdn/js/mvc.js'></script>
+    <script async src='/cdn/js/on.focus.js'></script>
     <script async src='/cdn/js/on.submit.js'></script>
     <script async src='/cdn/js/on.touch.tap.js'></script>
     <script async src='/cdn/js/router.js'></script>
@@ -99,7 +100,7 @@
             <div id='settings' class='settings'></div>
             <div id='me' class='me' data-href="/my/"></div>
           </nav><!--
-          --><section class='apps' id='apps' data-evt="apps">
+          --><section class='apps' data-evt="apps">
             <div class="app" data-after="Arcade" data-app="arcade"><a></a></div>
             <div class="app" data-after="Build" data-app="build"><a></a></div>
             <div class="app" data-after="Calculator" data-app="calculator"><a></a></div>
@@ -118,7 +119,7 @@
             <div class="app" data-after="Weather" data-app="weather"><a></a></div>
           </section><!--
         --></div>
-        <form class="search" id="search" data-evt="search"><div class="icon"></div><input placeholder="Search Apps" type="text"><input type="submit"></form>
+        <form class="search" id="search" data-evt="search"><div class="icon"></div><input id="bar" placeholder="Search Apps" type="text"><input type="submit"></form>
       </section>
       <section class="power" data-href="/"></section>
 

@@ -31,6 +31,8 @@ function init() {
     updateClock(); setInterval('updateClock()', 1000);
                             
     dom.body.onclick = event => on.touch.tap(event,'tap');
+
+    byId('bar').onfocus = event => on.focus.search(event);
                               
     //dom.popup.addEventListener("touchstart", on.touch, {passive: true});
     //dom.popup.addEventListener("touchmove", on.touch, {passive: true});

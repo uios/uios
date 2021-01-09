@@ -16,16 +16,14 @@ window.on['touch']["tap"] = (ev,t) => {
     if(a) { a.dataset.href.router(); }
     else {
         if(evt === 'apps') {
-            event.target.dataset.app ? ("/apps/"+event.target.dataset.app+"/").router() : null;
+            event.target.dataset.app ? ("/desktop/apps/"+event.target.dataset.app+"/").router() : null;
         }
         if(evt === 'search') {
             if(className === 'icon') {
-                if(GET[0] === 'desktop') {
-                    if(GET[1] === 'search') {
-                        '/desktop/'.router();
-                    } else {
-                        '/desktop/search/'.router();
-                    }
+                if(GET.length > 1) {
+                    '/desktop/'.router();
+                } else {
+                    '/desktop/apps/'.router();
                 }
             }
         }

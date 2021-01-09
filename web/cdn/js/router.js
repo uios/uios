@@ -10,10 +10,9 @@ String.prototype.router = function(a, b=a ? a : {}, pop=b.pop ? b.pop : null, pa
         } 
         else { paths = data; }
                 
-        return new Promise(function(resolve, reject) { console.log({paths});
+        return new Promise(function(resolve, reject) { //console.log({paths});
 
           var root = paths.GOT[0];
-          var port = document.body.find('[data-page="'+paths.page+'"]');
 
           if(root) { document.body.dataset.root = root; } 
           else { document.body.removeAttribute('data-root'); }
@@ -52,16 +51,11 @@ window.route = state => { //console.log({state});
       else { arr1[n] = arr2[n] = m; }
     n++; } while( n < GOT.length); }    
     var data = {
-        GOT:arr2, 
-        arr: {arr1, arr2}, 
+        GOT:arr2,
         page:routes.url(arr1), 
-        path:routes.url(routes.dir(state.replace('#',''))), 
-        port:routes.url(arr2), 
-        state, 
-        section
+        path:routes.url(routes.dir(state.replace('#','')))
     };
-    data.section = document.querySelector('[data-port="'+data.port+'"]') ? document.querySelector('[data-port="'+data.port+'"]').closest('.section') : null;
-    console.log({data},routes.url(arr2)); 
+    //console.log({data},routes.url(arr2)); 
     return data;
 }
 window.routes = {
