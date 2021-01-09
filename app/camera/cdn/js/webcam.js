@@ -151,13 +151,12 @@ window.webcam = {
                     var capabilities = track.getCapabilities(); console.log({capabilities});
                     if(capabilities.zoom) { }
                     if(capabilities.torch) { }
-                    dom.body.dataset.camera = "playing";
+                    dom.body.dataset.webcam = "playing";
                     dom.video.play();
                     resolve({paths});
                 }
-            }).catch(err => {
-                $(camera).removeClass('playing');
-                dom.body.dataset.cam = false;
+            }).catch(err => { console.log({err});
+                dom.body.removeAttribute("data-webcam");
                 resolve({paths,err});
             });
         });
