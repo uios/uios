@@ -30,7 +30,9 @@ main > * { display: inline-block; vertical-align: top; }
 .note {width: calc(100% - 562px);height: 100%;position: relative;}
 .note .note-header {height: 46px;line-height: 46px;padding: 0;font-size: 21px;border-bottom: 1px solid hsla(0,0%,83.1%,.6);display: flex;display: -webkit-flex;}
 .note .note-header .new { width: 46px; height: 46px; background-image: url(/cdn/svg/create.svg); background-size: 50%; background-repeat: no-repeat; background-position: center; }
-.note .note-header .delete {width: 46px;height: 46px;margin-left: auto;opacity: 0.25;background-image: url(/cdn/svg/trash.svg);background-size: 50%;background-repeat: no-repeat;background-position: center;}
+.note .note-header .delete {width: 46px;height: 46px;margin-left: auto;margin-right: 10px;opacity: 0.25;background-image: url(/cdn/svg/trash.svg);background-size: 50%;background-repeat: no-repeat;background-position: center;}
+.note .note-header .user { margin-left: 10px; position: relative; }
+.note .note-header .user:before {content: '';display: block;width: 1px;height: 23px;position: absolute;left: -16px;top: 0;bottom: 0;margin: auto;background: hsla(0,0%,83.1%,.6);}
 .note .note-header .user .name {padding: 0 10px 0 0;color:#edbb00;display: inline-block;vertical-align: top;}
 .note .note-header .user .name:empty:before { content: 'Guest'; }
 .note .note-header .user .down {width: 20px;height: 46px;display: inline-block;vertical-align: top;}
