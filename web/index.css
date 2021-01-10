@@ -88,7 +88,7 @@
 }
 
 .desktop > .apps .app header { display: flex; display: -webkit-flex; width: 100%; height: 100%; }
-.desktop > .apps .app header > :first-child { height: 36px; line-height: 36px; padding: 0 10px; }
+.desktop > .apps .app header > :first-child {height: 36px;line-height: 36px;padding: 0 10px;text-transform: capitalize;}
 .desktop > .apps .app header .actions {height: 36px;width: 108px;margin-left: auto;}
 .desktop > .apps .app header .actions > * {width: 36px;height: 36px;display: inline-block;vertical-align: top;position: relative;}
 .desktop > .apps .app header .actions > .mini:before {content:'';display: block;width: 14px;height: 2px;margin: auto;background: #bbb;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
