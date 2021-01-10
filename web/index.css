@@ -41,43 +41,45 @@
 .apps .ico a {padding-top: 100%;width: 100%;height: 0;margin-bottom: 5px;border-radius: 10px;display: block;background-repeat:no-repeat;background-position: center;position: relative;}
 .apps .ico a:after { background-repeat: no-repeat; background-position: center; }
 .apps .ico a:after, .apps .ico a:before {content: '';position: absolute;top: 0;left: 0;right: 0;width: 100%;height: 100%;} 
-.apps .ico[data-app="account"] a:after {background-image: url(/apps/account/svg/icon.svg);background-size: 50%;filter: invert(0);opacity:calc(2/3);z-index: 1;}
+.apps .ico[data-app="account"] a:after {background-image: url(/cdn/svg/apps/account.svg);background-size: 50%;filter: invert(0);opacity:calc(2/3);z-index: 1;}
 .apps .ico[data-app="account"] a:before {background: linear-gradient(to top, #f5f5f5, #bbb);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="arcade"] a:after {background-image: url(/apps/arcade/svg/icon.svg);background-size: 50%;filter: invert(1);z-index: 1;}
+.apps .ico[data-app="arcade"] a:after {background-image: url(/cdn/svg/apps/arcade.svg);background-size: 50%;filter: invert(1);z-index: 1;}
 .apps .ico[data-app="arcade"] a:before {background: linear-gradient(to top, #f12711, #f5af19);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="build"] a:after {background-image: url(/apps/build/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;opacity:1l}
+.apps .ico[data-app="build"] a:after {background-image: url(/cdn/svg/apps/build.svg);background-size: 50%;filter: invert(0);z-index: 1;opacity:1l}
 .apps .ico[data-app="build"] a:before {background: linear-gradient(to top, #251918, #2f2b29);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="creator"] a:after {background-image: url(/apps/creator/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="creator"] a:after {background-image: url(/cdn/svg/apps/creator.svg);background-size: 50%;filter: invert(0);z-index: 1;}
 .apps .ico[data-app="creator"] a:before {background: linear-gradient(to top, #cccccc, #ffffff);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="calculator"] a:after {background-image: url(/apps/calculator/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="calculator"] a:after {background-image: url(/cdn/svg/apps/calculator.svg);background-size: 50%;filter: invert(0);z-index: 1;}
 .apps .ico[data-app="calculator"] a:before {background: linear-gradient(to top, #2196F3, #00BCD4);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="camera"] a:after {background-image: url(/apps/camera/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
-.apps .ico[data-app="camera"] a:before {background: linear-gradient(to top, #565656, #807b7b);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="draw"] a:after {background-image: url(/apps/draw/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="camera"] a:after {background-image: url(/cdn/svg/apps/camera.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="camera"] a:before {background: linear-gradient(to top, #565656, #807b7b);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;};}
+.apps .ico[data-app="clock"] a:after {background-image: url(/cdn/svg/apps/clock.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="clock"] a:before {background: linear-gradient(to top, #1a1a1a, #2d2d2d);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
+.apps .ico[data-app="draw"] a:after {background-image: url(/cdn/svg/apps/draw.svg);background-size: 50%;filter: invert(0);z-index: 1;}
 .apps .ico[data-app="draw"] a:before {background: linear-gradient(to top, #bbbbbb, #f5f5f5);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="library"] a:after {background-image: url(/apps/library/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="library"] a:after {background-image: url(/cdn/svg/apps/library.svg);background-size: 50%;filter: invert(0);z-index: 1;}
 .apps .ico[data-app="library"] a:before {background: linear-gradient(to top, #4a352d, #795548);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="market"] a:after {background-image: url(/apps/market/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="market"] a:after {background-image: url(/cdn/svg/apps/market.svg);background-size: 50%;filter: invert(0);z-index: 1;}
 .apps .ico[data-app="market"] a:before {background: linear-gradient(to top, #4b7488, #deba77);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="media"] a:after {background-image: url(/apps/media/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="media"] a:after {background-image: url(/cdn/svg/apps/media.svg);background-size: 50%;filter: invert(0);z-index: 1;}
 .apps .ico[data-app="media"] a:before {background: linear-gradient(to top, #9C27B0, #673AB7);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="notes"] a:after {background-image: url(/apps/notes/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="notes"] a:after {background-image: url(/cdn/svg/apps/notes.svg);background-size: 50%;filter: invert(0);z-index: 1;}
 .apps .ico[data-app="notes"] a:before {background: linear-gradient(to top, #CDDC39, #FFEB3B);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="office"] a:after {background-image: url(/apps/office/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="office"] a:after {background-image: url(/cdn/svg/apps/office.svg);background-size: 50%;filter: invert(0);z-index: 1;}
 .apps .ico[data-app="office"] a:before {background: linear-gradient(to top, #880a11, #b52718);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="pages"] a:after {background-image: url(/apps/pages/svg/icon.svg);background-size: 50%;filter: invert(1);z-index: 1;}
+.apps .ico[data-app="pages"] a:after {background-image: url(/cdn/svg/apps/pages.svg);background-size: 50%;filter: invert(1);z-index: 1;}
 .apps .ico[data-app="pages"] a:before {background: linear-gradient(to top, #607D8B, #9E9E9E);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="talk"] a:after {background-image: url(/apps/talk/svg/icon.svg);background-size: 50%;z-index: 1;}
+.apps .ico[data-app="talk"] a:after {background-image: url(/cdn/svg/apps/talk.svg);background-size: 50%;z-index: 1;}
 .apps .ico[data-app="talk"] a:before {background: linear-gradient(to top, #4CAF50, #26f519);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="jukebox"] a:after {background-image: url(/apps/jukebox/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="jukebox"] a:after {background-image: url(/cdn/svg/apps/jukebox.svg);background-size: 50%;filter: invert(0);z-index: 1;}
 .apps .ico[data-app="jukebox"] a:before {background: linear-gradient(to top, #FF9800, #CDDC39);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="gallery"] a:after {background-image: url(/apps/gallery/svg/icon.svg);background-size: 50%;z-index: 1;}
+.apps .ico[data-app="gallery"] a:after {background-image: url(/cdn/svg/apps/gallery.svg);background-size: 50%;z-index: 1;}
 .apps .ico[data-app="gallery"] a:before {background: linear-gradient(to top, #8ddab2, #ccf3ed);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="recorder"] a:after {background-image: url(/apps/recorder/svg/icon.svg);background-size: 50%;filter: invert(1);z-index: 1;}
+.apps .ico[data-app="recorder"] a:after {background-image: url(/cdn/svg/apps/recorder.svg);background-size: 50%;filter: invert(1);z-index: 1;}
 .apps .ico[data-app="recorder"] a:before {background: linear-gradient(to top, #3F51B5, #26a3b9);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="weather"] a:after {background-image: url(/apps/weather/svg/icon.svg);background-size: 50%;filter: invert(0);z-index: 1;}
+.apps .ico[data-app="weather"] a:after {background-image: url(/cdn/svg/apps/weather.svg);background-size: 50%;filter: invert(0);z-index: 1;}
 .apps .ico[data-app="weather"] a:before {background: linear-gradient(to top, #fabe02, #26a3b9);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
-.apps .ico[data-app="words"] a:after {background-image: url(/apps/words/svg/icon.svg);background-size: 50%;z-index: 1;filter: invert(1);}
+.apps .ico[data-app="words"] a:after {background-image: url(/cdn/svg/apps/words.svg);background-size: 50%;z-index: 1;filter: invert(1);}
 .apps .ico[data-app="words"] a:before {background: linear-gradient(to top, #727dbb, #50c1de);border-radius:15%;display: block;width: 100%;height: 100%;z-index: 0;}
 
 .start .apps .app > a {width: 30px;height: 30px;display: inline-block;background-color: #bbb;vertical-align: middle;border-radius: 15%;margin: 10px 10px 10px 10px;}
