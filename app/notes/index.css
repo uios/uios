@@ -69,7 +69,7 @@ main > * { display: inline-block; vertical-align: top; }
 .note .note-header .user .down:before { content: ''; display: block; }
 .note .note-header .user .down:after { content: ''; display: block; }
 .note .note-section {width: 100%;height: calc(100% - 47px);margin: 0;}
-.note .note-section .editor {padding: 5px 20px;line-height: 14px;}
+.note .note-section .editor {padding: 20px 20px;line-height: 24px;height: calc(100% - 40px);overflow-x: hidden;}
 .note .note-section .editor:focus { outline: none; }
 @media screen and (max-width: 1280px) {
     body[data-page="/"] .note,
