@@ -56,7 +56,7 @@ main > * { display: inline-block; vertical-align: top; }
     body[data-page="/"] .note,
     body[data-page="/*/"] .note {width: calc(100% - 321px);border-top: 1px solid hsla(0,0%,83.1%,.6);}
     .note {height: calc(100% - 47px);margin-top: 46px;}
-    .note .note-header .user { position: absolute; top: -50px; right: 0; }
+    .note .note-header .user {position: absolute;top: -47px;right: 0;}
     .note .note-header .user:before {display: none; }
 }
 @media screen and (max-width: 768px) {
