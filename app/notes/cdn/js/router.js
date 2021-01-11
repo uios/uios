@@ -26,16 +26,15 @@ window.route = state => { //console.log({state});
     var GOT = state===window.location.origin ? [] : routes.dir(state);
     var data, n = 0, arr1 = [], arr2 = [], section, view = GOT && GOT[0] ? GOT[0] : '/';  
     var root = GOT[0];
-    if(GOT.length > 0) { do { var m = GOT[n];
-      if(m.includes('#')) { arr1[n] = '*'; arr2[n] = m; }
-      else { arr1[n] = arr2[n] = m; }
-    n++; } while( n < GOT.length); }    
+    if(GOT.length > 0) { do {
+      arr1[n] = '*'; 
+      arr2[n] = GOT[n];
+    n++; } while(n < GOT.length); }    
     var data = {
         GOT:arr2,
         page:routes.url(arr1), 
         path:routes.url(routes.dir(state.replace('#','')))
     };
-    //console.log({data},routes.url(arr2)); 
     return data;
 }
 window.routes = {
