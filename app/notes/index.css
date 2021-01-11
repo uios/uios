@@ -68,8 +68,8 @@ main > * { display: inline-block; vertical-align: top; }
 .note .note-header .user .down {width: 20px;height: 46px;display: inline-block;vertical-align: top;}
 .note .note-header .user .down:before { content: ''; display: block; }
 .note .note-header .user .down:after { content: ''; display: block; }
-.note .note-section {width: 100%;height: calc(100% - 47px);}
-.note .note-section .editor { width: 100%; height: 100%; }
+.note .note-section {width: 100%;height: calc(100% - 47px);margin: 0;}
+.note .note-section .editor {padding: 5px 20px;line-height: 14px;}
 .note .note-section .editor:focus { outline: none; }
 @media screen and (max-width: 1280px) {
     body[data-page="/"] .note,
