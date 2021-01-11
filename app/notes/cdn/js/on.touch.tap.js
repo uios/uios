@@ -27,6 +27,17 @@ window.on["touch"]["tap"] = (ev,t) => {
                 }
             }
         }
+        if(evt === "note-header") {
+            if(id === 'new') {
+                var href = '';
+                if(GET.length === 0) { href = '/_/' }
+                else { href = '/'+GET[0]+'/' }
+                href.router().then(() => {
+                    dom.editor.contentEditable = true;
+                    dom.editor.focus();
+                });
+            }            
+        }
     }
     
 }

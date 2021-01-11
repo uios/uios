@@ -3,7 +3,8 @@ window.addEventListener("popstate", e => (e.state ? e.state.router({pop:true,top
 window.onload = () => {
 
     window.dom = {
-        "body": document.body        
+        "body": document.body,
+        "editor": byId('editor')
     }
 
     window.location.pathname.router();
