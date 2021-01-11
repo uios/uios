@@ -1,3 +1,5 @@
+window.addEventListener("popstate", e => (e.state ? e.state.router({pop:true,top:false}) : null));
+
 window.onload = () => {
 
     window.dom = {
