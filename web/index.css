@@ -123,7 +123,7 @@
 .desktop .start .search [type="text"] {width: calc(100% - 50px);height: 50px;display: inline-block;vertical-align: top;font-size: 18px;color: white;text-indent: 10px;}
 .desktop .start .search [type="text"]::placeholder { color: white; }
 .desktop .start .search [type="submit"] { display: none; }
-.desktop .power {width: 50px;height: 50px;right: 0;bottom: 0;z-index: 1;filter: invert(1);position: fixed;background-image: url(/cdn/svg/power.svg);background-size: 24px;background-position: center;background-repeat: no-repeat;}
+.desktop .power {width: 50px;height: 50px;right: 0;bottom: 0;z-index: 1;filter: invert(1);background-image: url(/cdn/svg/power.svg);background-size: 24px;background-position: center;background-repeat: no-repeat;}
 .desktop .start .menu .apps {width: calc(100% - 50px);height: 100%;display: inline-block;vertical-align: top;overflow-x: hidden;}
 @media screen and (max-width: 480px) {
     .desktop .start.menu {width: 100%;max-width: 100%;max-height: 100%;}
