@@ -1,9 +1,9 @@
-body { margin: 0; font-family: Arial; }
+body {margin: 0;font-family: Arial;background: white;}
 
 main { background: rgba(255,255,255,1.5); }
 main > * { display: inline-block; vertical-align: top; }
 
-.folders {width: 240px;height: 100%;border-right: 1px solid hsla(0,0%,83.1%,.6);position: relative;}
+.folders {width: 240px;height: 100%;border-right: 1px solid hsla(0,0%,83.1%,.6);position: relative;background: white;}
 .folders .folders-header {height: 46px;line-height: 46px;padding: 0 16px;font-size: 21px;border-bottom: 1px solid hsla(0,0%,83.1%,.6);}
 .folders .folders-header span { font-weight: bolder; }
 .folders .folders-header .app {margin-left: 5px;color: #edbb00;}
@@ -18,7 +18,10 @@ main > * { display: inline-block; vertical-align: top; }
 .folders .folders-footer .new:after {content: '';display: block;width: 24px;height: 2px;background: #edbb00;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;transform: rotate(90deg);}
 @media screen and (max-width: 1280px) {
     body[data-page="/note/"] .folders,
-    body[data-page="/note/*/"] .folders { display: none; }    
+    body[data-page="/note/*/"] .folders { display: none; }
+}
+@media screen and (max-width: 768px) {
+    body[data-page="/"] .folders {position: absolute;z-index: 1;}    
 }
 
 .notes {width: 320px;height: 100%;border-right: 1px solid hsla(0,0%,83.1%,.6);position: relative;}
@@ -31,7 +34,7 @@ main > * { display: inline-block; vertical-align: top; }
 .notes .notes-section {position: relative;left: 0;right: 0;min-height: calc(100% - 47px);}
 .notes .notes-section:empty:before {content: 'No Notes';display: -webkit-flex;display: -ms-flexbox;display: -webkit-box;display: flex;-webkit-justify-content: center;-ms-flex-pack: center;-webkit-box-pack: center;justify-content: center;-webkit-align-items: center;-ms-flex-align: center;-webkit-box-align: center;align-items: center;color: #9d9da4;font-size: 15px;font-weight: 300;width: 100%;height: 100%;position: absolute;}
 @media screen and (max-width: 1280px) {
-    .notes { display: none; }
+    body[data-page="/"] .notes { display: none; }
 }
 
 .note {width: calc(100% - 562px);height: 100%;position: relative;}
@@ -46,5 +49,8 @@ main > * { display: inline-block; vertical-align: top; }
 .note .note-header .user .down:before { content: ''; display: block; }
 .note .note-header .user .down:after { content: ''; display: block; }
 @media screen and (max-width: 1280px) {
-    .note { display: none; }    
+    body[data-page="/"] .note { width: calc(100% - 241px); }
+}
+@media screen and (max-width: 768px) {
+    body[data-page="/"] .note { width: calc(100%); }
 }
