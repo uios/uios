@@ -19,7 +19,7 @@ main > * { display: inline-block; vertical-align: top; }
 @media screen and (max-width: 1280px) {
     body[data-page="/*/"] .folders,
     body[data-page="/*/*/"] .folders { display: none; }
-    .folders {width: 320px;max-height: calc(100% - 46px);margin-top: 46px;border-top: 1px solid hsla(0,0%,83.1%,.6);}
+    .folders {width: 320px;max-height: calc(100% - 47px);margin-top: 46px;border-top: 1px solid hsla(0,0%,83.1%,.6);}
     .folders .folders-header {position: absolute;top: -46px;width: calc(100% - 32px);border: 0;}
 }
 @media screen and (max-width: 768px) {
@@ -51,10 +51,13 @@ main > * { display: inline-block; vertical-align: top; }
 .note .note-header .user .down {width: 20px;height: 46px;display: inline-block;vertical-align: top;}
 .note .note-header .user .down:before { content: ''; display: block; }
 .note .note-header .user .down:after { content: ''; display: block; }
+.note .note-section {width: 100%;height: calc(100% - 50px);}
 @media screen and (max-width: 1280px) {
     body[data-page="/"] .note,
     body[data-page="/*/"] .note {width: calc(100% - 321px);border-top: 1px solid hsla(0,0%,83.1%,.6);}
-    .note {height: calc(100% - 46px);margin-top: 46px;}
+    .note {height: calc(100% - 47px);margin-top: 46px;}
+    .note .note-header .user { position: absolute; top: -50px; right: 0; }
+    .note .note-header .user:before {display: none; }
 }
 @media screen and (max-width: 768px) {
     body[data-page="/"] .note { width: calc(100%); }
