@@ -47,7 +47,7 @@ main > * { display: inline-block; vertical-align: top; }
     body[data-page="/"] .folders, 
     body[data-page="/*/"] .folders {width: 100%;border: 0;}
     body[data-page="/"] .notes, 
-    body[data-page="/*/"] .notes {width: 100%;}
+    body[data-page="/*/"] .notes {width: 100%;border-right: 0;}
 }
 
 .notes {width: 320px;height: 100%;border-right: 1px solid hsla(0,0%,83.1%,.6);position: relative;background: white;}
