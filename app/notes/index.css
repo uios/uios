@@ -43,6 +43,12 @@ main > * { display: inline-block; vertical-align: top; }
     body[data-page="/"] .folders {position: absolute;z-index: 1;}    
     body[data-page="/*/"] .notes {position: absolute;z-index: 1;}    
 }
+@media screen and (max-width: 480px) {
+    body[data-page="/"] .folders, 
+    body[data-page="/*/"] .folders {width: 100%;border: 0;}
+    body[data-page="/"] .notes, 
+    body[data-page="/*/"] .notes {width: 100%;}
+}
 
 .notes {width: 320px;height: 100%;border-right: 1px solid hsla(0,0%,83.1%,.6);position: relative;background: white;}
 .notes .notes-header {height: 46px;line-height: 46px;padding: 0;font-size: 21px;border-bottom: 1px solid hsla(0,0%,83.1%,.6);}
