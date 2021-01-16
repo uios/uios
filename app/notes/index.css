@@ -24,10 +24,10 @@ main > * { display: inline-block; vertical-align: top; }
 .folders .folders-header {height: 46px;line-height: 46px;padding: 0 16px;font-size: 21px;display: none;border-bottom: 1px solid hsla(0,0%,83.1%,.6);}
 .folders .folders-header span { font-weight: bolder; }
 .folders .folders-header .app {margin-left: 5px;color: #edbb00;}
-.folders .folders-section {width: 100%;height: calc(100% - 50px);/* border-top: 1px solid hsla(0,0%,83.1%,.6); */}
+.folders .folders-section {width: 100%;height: calc(100% - 47px);/* border-top: 1px solid hsla(0,0%,83.1%,.6); */}
 .folders .folders-section > div {font-size: 17px;line-height: 46px;height: 46px;}
 .folders .folders-section > div:before {content: '';display: inline-block;background-size: contain;width: 23px;height: 46px;margin-left: 16px;margin-right: 14px;background-image: url(/cdn/svg/folder.svg);background-repeat: no-repeat;background-position: center;vertical-align: top;}
-.folders .folders-section > div span { display: inline-block; width: calc(100% - 53px); height: 46px; border-bottom: 1px solid hsla(0,0%,83.1%,.6); }
+.folders .folders-section > div span {display: inline-block;width: calc(100% - 53px);height: 46px;border-bottom: 1px solid hsla(0,0%,83.1%,.6);}
 .folders .folders-footer {width: 100%;height: 46px;position: absolute;bottom: 0;border-top: 1px solid hsla(0,0%,83.1%,.6);display: flex;display: -webkit-flex;}
 .folders .folders-footer .settings {width: 46px;height: 46px;background-image: url(/cdn/svg/settings.svg);background-size: 50%;background-position: center;background-repeat: no-repeat;}
 .folders .folders-footer .new {width: 46px;height: 46px;display: inline-block;position: relative;margin-left: auto;}
@@ -36,12 +36,14 @@ main > * { display: inline-block; vertical-align: top; }
 @media screen and (max-width: 1280px) {
     body[data-page="/*/"] .folders,
     body[data-page="/*/*/"] .folders {display: none;}
-    .folders {width: 320px;max-height: calc(100% - 47px);margin-top: 46px;padding-top: 0;/* border-top: 1px solid hsla(0,0%,83.1%,.6); */}
-    .folders .folders-header {position: absolute;top: -46px;width: calc(100% - 32px);border: 0;}
+    .folders {width: 320px;max-height: calc(100% - 47px);margin-top: 47px;padding-top: 0;/* border-top: 1px solid hsla(0,0%,83.1%,.6); */}
+    .folders .folders-header {position: absolute;top: -46px;width: calc(100% - 32px);border: 0;width:320px;}
+    .folders-header { width: 320px; }
 }
 @media screen and (max-width: 768px) {
     body[data-page="/"] .folders {position: absolute;z-index: 1;}    
-    body[data-page="/*/"] .notes {position: absolute;z-index: 1;}    
+    body[data-page="/*/"] .notes {position: absolute;z-index: 1;}
+    .folders-header { width: 100%; } 
 }
 @media screen and (max-width: 480px) {
     body[data-page="/"] .folders, 
