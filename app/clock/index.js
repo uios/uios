@@ -1,6 +1,11 @@
 window.onload = () => {  
+    //console.log(window.parent);
+    is.iframe() ? document.body.classList.add('iframe') : null;
     updateClock();
     setInterval('updateClock()', 1000);
+}
+window.is = {
+  iframe: () => { return self !== top; }
 }
 function updateClock () {
   var d = new Date ();
@@ -37,10 +42,19 @@ function updateClock () {
 
   var special = Object.keys(global.times).includes(hm);
   if(special) {
-    document.body.classList.add('special');
+    if(document.getElementById('body-footer').innerHTML === "") {
+      document.body.classList.add('special');
+      var types = global.times[hm];
+      var html = ``;
+      var t = 0; do {
+        html += `<div class="`+types[t]+`"></div>`;
+      t++ } while(t < types.length);
+      document.getElementById('body-footer').innerHTML = html;
+    }
   }
   else {
     document.body.classList.remove('special');
+    document.getElementById('body-footer').innerHTML = ``;
   }
 
 }
