@@ -1,8 +1,4 @@
-window.global = {
-    day: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thurday", "Friday", "Saturday"],
-    month: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-}
-window.onload = () => {
+window.onload = () => {  
     updateClock();
     setInterval('updateClock()', 1000);
 }
@@ -26,7 +22,8 @@ function updateClock () {
   currentHours = ( currentHours == 0 ) ? 12 : currentHours;
 
   // Compose the string for display
-  var dString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+  var hm = currentHours + ":" + currentMinutes;
+  var dString = hm + ":" + currentSeconds + " " + timeOfDay;
 
   // Update the time display  
   var month = global.month[d.getMonth()];
@@ -37,4 +34,13 @@ function updateClock () {
 
   document.getElementById("time").textContent = dString;
   document.getElementById("date").textContent = stamp;
+
+  var special = Object.keys(global.times).includes(hm);
+  if(special) {
+    document.body.classList.add('special');
+  }
+  else {
+    document.body.classList.remove('special');
+  }
+
 }

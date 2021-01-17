@@ -22,7 +22,6 @@ function init() {
   
     firebase.auth().onAuthStateChanged(user => {
         auth.change(user).then(goto => {
-            console.log({goto});
             goto = (user && document.body.dataset.ppp === '/my/account/') ? '/' : window.location.pathname;
             goto.router();
         });
