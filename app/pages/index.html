@@ -19,16 +19,70 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/cdn/svg/safari-pinned-tab.svg" color="#5bbad5">
     <link async rel="stylesheet" href="/index.css" media="all">
-    <script src='/cdn/js/global.js'></script>
     <script src='/index.js'></script>
-    <script async src='/cdn/js/jpurey.js'></script>
-    <script async src='/cdn/js/on.touch.tap.js'></script>
-    <script async src='/cdn/js/router.js'></script>
   </head><!--
 
 --><body id="body"><!--
     
-    --><header></header><!--
+    --><nav class="nav-header"><!--
+        --><div>File</div><!--
+        --><div>Edit</div><!--
+        --><div>View</div><!--
+        --><div>Insert</div><!--
+        --><div>Format</div><!--
+        --><div>Help</div><!--
+    --></nav><!--
+
+    --><header class="body-header"><!--
+        --><section class="formatting"><!--
+            --><select class="font-family"><!--
+                --><option>Arial</option><!--
+                --><option>Calibri</option><!--
+                --><option>Courier New</option><!--
+                --><option>Garamond</option><!--
+                --><option>Georgia</option><!--
+                --><option>Helvetica</option><!--
+                --><option>Tahoma</option><!--
+                --><option>Times New Roman</option><!--
+                --><option>Verdana</option><!--
+            --></select><!--
+            --><select class="font-size"><!--
+                --><option>8</option><!--
+                --><option>9</option><!--
+                --><option>10</option><!--
+                --><option>11</option><!--
+                --><option>12</option><!--
+                --><option>14</option><!--
+                --><option>16</option><!--
+                --><option>18</option><!--
+                --><option>20</option><!--
+                --><option>22</option><!--
+                --><option>24</option><!--
+                --><option>26</option><!--
+                --><option>28</option><!--
+                --><option>36</option><!--
+                --><option>48</option><!--
+                --><option>72</option><!--
+            --></select><!--
+
+            --><div class="emphasis"><!--
+                --><div class="bold"></div><!--
+                --><div class="italic"></div><!--
+                --><div class="underline"></div><!--
+                --><div class="color"></div><!--
+            --></div><!--
+
+            --><div class="alignment"><!--
+                --><div class="left"></div><!--
+                --><div class="center"></div><!--
+                --><div class="right"></div><!--
+            --></div><!--
+
+            --><div class="bullets"></div><!--
+        --></section><!--
+    --></header><!--
+
+    --><section class="wysiwyg"><div class="editor" contenteditable="true"></div></section><!--
     
 --></body><!--
 
