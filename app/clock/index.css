@@ -11,5 +11,7 @@ main .time {font-size: 48px;}
 .body-footer .ablative { background: red; }
 .body-footer .doublets { background: orange; }
 .body-footer .multiply { background: green; }
+.body-footer .inversed { background: gray; }
+.body-footer .additive { background: blue; }
 
 
