@@ -19,7 +19,14 @@ https://camera.uios.app/* /app/camera/index.html 200
 https://clock.uios.app /app/clock/index.html 200
 https://clock.uios.app/index.css /app/clock/index.css 200
 https://clock.uios.app/index.js /app/clock/index.js 200
+https://clock.uios.app/cdn/* /app/clock/cdn/:splat 200
 https://clock.uios.app/* /app/clock/index.html 200
+
+https://jukebox.uios.app /app/jukebox/index.html 200
+https://jukebox.uios.app/index.css /app/jukebox/index.css 200
+https://jukebox.uios.app/index.js /app/jukebox/index.js 200
+https://jukebox.uios.app/cdn/* /app/jukebox/cdn/:splat 200
+https://jukebox.uios.app/* /app/jukebox/index.html 200
 
 https://notes.uios.app /app/notes/index.html 200
 https://notes.uios.app/index.css /app/notes/index.css 200
