@@ -42,8 +42,12 @@ function updateClock () {
 
   var special = Object.keys(global.times).includes(hm);
   if(special) {
-    if(document.getElementById('body-footer').innerHTML === "") {
+    if(
+      document.getElementById('body-footer').innerHTML === "" &&
+      document.getElementById('body-footer').dataset.hm !== hm
+    ) {
       document.body.classList.add('special');
+      document.getElementById('body-footer').dataset.hm = special;
       var types = global.times[hm];
       var html = ``;
       var t = 0; do {
