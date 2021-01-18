@@ -22,6 +22,12 @@ https://clock.uios.app/index.js /app/clock/index.js 200
 https://clock.uios.app/cdn/* /app/clock/cdn/:splat 200
 https://clock.uios.app/* /app/clock/index.html 200
 
+https://ide.uios.app /app/ide/index.html 200
+https://ide.uios.app/index.css /app/ide/index.css 200
+https://ide.uios.app/index.js /app/ide/index.js 200
+https://ide.uios.app/cdn/* /app/ide/cdn/:splat 200
+https://ide.uios.app/* /app/ide/index.html 200
+
 https://jukebox.uios.app /app/jukebox/index.html 200
 https://jukebox.uios.app/index.css /app/jukebox/index.css 200
 https://jukebox.uios.app/index.js /app/jukebox/index.js 200

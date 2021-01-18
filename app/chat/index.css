@@ -1,0 +1,83 @@
+:hover::-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px rgba(255,59,48,1.5) inset;-webkit-box-shadow: none;}
+:hover::-webkit-scrollbar {width: 10px;height: 10px;border-radius: 10px;background: transparent;border-radius: 0px;}
+:hover::-webkit-scrollbar-thumb {width: 10px;height: 10px;border-radius: 10px;background: rgba(128,128,128,0.5);}
+:hover::-webkit-scrollbar-button {height: 0;width: 0;border-radius: 10px;}
+::-webkit-scrollbar {width: 0px;height: 0px;}
+::-webkit-scrollbar-thumb {width: 0px;height: 0px;}
+
+card, chat, icon, inline, message, name, room, rooms, room, text, user, words { display: block; }
+
+body {margin: 0;font-family: Arial;position: absolute;width: 100%;height: 100%;}
+body[data-dark="true"] { background: black; }
+
+.content.main {width: 100%;height: 100%;overflow: hidden;position: fixed;overflow-x: hidden;overflow-y: auto;z-index: 12;}
+.content.room { transition: 0.3s opacity; }
+
+body[data-section="room"] .content.room {opacity:1;width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom:0;z-index: 12345;backdrop-filter: blur(10px);overflow: hidden;}
+body[data-section="main"] .content.room { opacity: 0; }
+
+header {position: fixed;top: 0;left: 0;right: 0;width: calc(100% - 36px);/* max-width: 960px; */height: 50px;color: white;z-index:123;margin: auto;/* background: #0094d0; */}
+header .logo { line-height:50px; padding: 0 10px; font-size: 24px; font-weight: bolder; }
+header .user {width: 30px;height: 30px;background: white;border-radius: 50%;margin: 10px 10px 10px auto;}
+header .user > * { display:none; }
+
+
+.section-create {width: 100%;height: calc(100vh - 172px);background: #0094d0;}
+[data-dark="true"] .section-create { background:#151961; }
+.section-create card {width: 480px;max-width: 100%;margin: auto;color: white;}
+.section-create .text-1 { text-align: center; font-size: 36px; font-weight: bolder; }
+.section-create .text-2 { text-align: center; font-size: 18px; line-height: 36px; }
+
+.create-room {border-radius: 36px;line-height: 36px;height: 36px;overflow: hidden;margin: 72px auto 0;max-width: calc(100% - 36px);}
+.create-room input[type="text"] {height: 100%;flex: 1;}
+.create-room input[type="submit"] {width: auto;height: 100%;background: #777;color: white;font-size: 18px;padding: 0 18px;}
+
+.section-dock {width: 50px;height: 100%;z-index: 1234;position: fixed;display: -webkit-flex;flex-direction: column;z-index: 12345;}
+.section-dock div {width: 50px;height: 50px;text-align: center;line-height: 50px;font-size: 24px;}
+.section-dock :last-child {margin-top: auto;margin-left: auto;}
+.section-dock .play:before { content: '\25B6\FE0F'; }
+.section-dock .stop:before { content: '\23F9\FE0F'; }
+
+@media screen and (orientation: portrait) {
+
+    .section-dock {flex-direction: row;width: 100%;height: 50px;}
+
+}
+
+@media screen and (max-width: 425px) {
+   
+    .section-create .text-1 {font-size:24px;}
+    .section-create .text-2 {font-size:12px;}
+    .create-room input[type="submit"] { background-color: white; width: 36px; font-size: 0; }
+    
+}
+
+/*CLASSES*/
+.flex { display: -moz-flex; display: -ms-flex; display: -webkit-flex; display: flex; }
+
+input[type="button"] { border: 0; background-color: transparent; }
+input[type="text"] {outline: none;text-indent: 10px;font-size: 18px;border: 0;background: transparent;padding: 0;margin: 0;}
+input[type="submit"] {-webkit-appearance:none;border: 0;}
+
+
+/*ROOMS*/
+
+aside iframe {position: absolute;top: 5px;left: 100px;border: 0;}
+
+
+
+.section-room {background: #000;position: absolute;top: 0;right: 0;}
+.section-chat {color: white;width: calc(100% - 20px);width: 425px;max-height: calc((100% - 50px)/1);position: absolute;bottom: 50px;right: 0;overflow-x: hidden;z-index: 123;}
+
+.section-chat chat.messages {z-index: 12345;position: relative;width: 100%;height: auto;border-radius: 30px;color: white;padding: 86px 0 0;display: -webkit-flex;flex-direction: column;bottom: 0;}
+.section-chat chat.messages text { }
+.section-chat chat.messages user { }
+.section-chat chat.messages message { }
+.section-chat chat.messages name { }
+.section-chat chat.messages words { }
+
+
+input[type="submit"] { background: transparent;border:0; }
+
+[data-after]:after { content: attr(data-after); }
+[data-before]:before { content: attr(data-before); }

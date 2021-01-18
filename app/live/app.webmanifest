@@ -1,0 +1,8 @@
+{
+    "name": "CamUp",
+    "short_name": "CamUp",
+    "theme_color": "#1a1a1a",
+    "background_color": "#1a1a1a",
+    "start_url": "https://rtc.camup.gq",
+    "display": "standalone"
+}
