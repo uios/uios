@@ -1,5 +1,5 @@
 .section-room {display: flex;flex-direction: row;overflow: hidden;width: 100%;height: 100%;flex-wrap: wrap;background: #000;position: absolute;top: 0;right: 0;}
-.section-room > video {object-position: center;width: 100%;height: 100%; object-fit: cover; }
+.section-room > video, video {object-position: center;width: 100%;height: 100%; object-fit: cover; }
 .section-room > video.contain { object-fit: contain; }
 
 .section-room[data-cams="1"] video:nth-child(1) ~ video,

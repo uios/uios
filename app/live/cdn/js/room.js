@@ -37,23 +37,29 @@ window.room = {
             event.mediaElement.removeAttribute('srcObject');
             event.mediaElement.muted = true;
             event.mediaElement.volume = 0;
+        if(1<0) {
             var video = document.createElement('video'); 
             try {
                 video.setAttributeNode(document.createAttribute('autoplay'));
                 video.setAttributeNode(document.createAttribute('playsinline'));
+                video.setAttributeNode(document.createAttribute('muted'));
             } catch (e) {
                 video.setAttribute('autoplay', true);
                 video.setAttribute('playsinline', true);
+                video.setAttribute('muted', true);
             }
             if(event.type === 'local') { video.volume = 0;
               try { video.setAttributeNode(document.createAttribute('muted')); } 
               catch (e) { video.setAttribute('muted', true); }
             }
+            connection.videosContainer.append(video);
+        } else {
+            var video = document.getElementById('mine');                
+        }
             video.muted = true;
             video.onloadedmetadata = () => video.play();
             video.srcObject = event.stream;
             var width = parseInt(connection.videosContainer.clientWidth / 3) - 20;            
-            connection.videosContainer.append(video);
             video.id = event.streamid;
             if(event.type === 'local') { connection.socket.on('disconnect', () => { connection.getAllParticipants().length ? null : location.reload(); }); }
             new MutationObserver(waitElem).observe(document.getElementById('section-room'), { childList: true, attributes: true, subtree: true });           

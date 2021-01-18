@@ -68,7 +68,7 @@
         <div class="user" data-before="&#x2699;&#xFE0F;"></div>
         <div class="cast" data-before="&#x1F4F9;"></div>
       </section>
-      <section id="section-room" class="section section-room"></section>
+      <section id="section-room" class="section section-room"><video autoplay loop muted playsinline id="mine"></video></section>
       <section id="section-chat" class="section section-chat"><chat class="messages" id="messages"></chat></section>
       <form class="form-message" id="form-message" onsubmit="event.preventDefault(); room.msg.send(event.target.firstElementChild.value); event.target.firstElementChild.value=''">
         <input autocomplete="off" autocorrect="off" id="messager" class="messager" name="messager" type="text" onkeyup="event.keyCode===13 ? event.target.nextElementSibling.click() : null" placeholder="Start typing">
@@ -90,7 +90,7 @@
       </section>
     </main>
 
-    <video autoplay loop muted playsinline id="mine"></video>
+    
     
   </body>
 
