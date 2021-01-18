@@ -6,12 +6,12 @@ String.prototype.router = function(a,b=(a ? a : {}), pop=(b.pop ? b.pop : null),
       if(container) { 
         document.body.dataset.section = container;
         var view = container === 'main' ? 'home' : 'room';
-        ajax('/cdn/js/'+view+'.html').then(template => { console.log({path,GOT});
+        //ajax('/cdn//'+view+'.html').then(template => { console.log({path,GOT});
           if(GOT[0]) { room.connect(GOT[0]); }
           pop ? null : history.pushState(null,'uiOS',path);
           window.GET = route.dir(path);
           resolve({path,GET});
-        });
+        //});
       }
     }
   });
