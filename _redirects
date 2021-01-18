@@ -34,6 +34,12 @@ https://jukebox.uios.app/index.js /app/jukebox/index.js 200
 https://jukebox.uios.app/cdn/* /app/jukebox/cdn/:splat 200
 https://jukebox.uios.app/* /app/jukebox/index.html 200
 
+https://live.uios.app /app/live/index.html 200
+https://live.uios.app/index.css /app/live/index.css 200
+https://live.uios.app/index.js /app/live/index.js 200
+https://live.uios.app/cdn/* /app/live/cdn/:splat 200
+https://live.uios.app/* /app/live/index.html 200
+
 https://notes.uios.app /app/notes/index.html 200
 https://notes.uios.app/index.css /app/notes/index.css 200
 https://notes.uios.app/index.js /app/notes/index.js 200

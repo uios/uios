@@ -12,21 +12,21 @@
     <link rel="apple-touch-startup-image" href="apple-touch-startup-image.png">
     <link rel="canonical" href="https://camup.gq/"/>
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="manifest" href="app.webmanifest">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link async rel="stylesheet" href="/index.css" media="all">
-    <link async rel="stylesheet" href="/chat.css" media="all">
-    <link async rel="stylesheet" href="/home.css" media="all">
-    <link async rel="stylesheet" href="/room.css" media="all">
-    <script src="/firebase-app.js"></script>
-    <script src="/firebase-auth.js"></script>
-    <script src="/socket.io.min.js"></script>
-    <script src="/webrtc.min.js"></script>
-    <script async src='/auth.js'></script>
-    <script async src='/room.js'></script>
-    <script async src='/touch.js'></script>
-    <script async src='/router.js'></script>
-    <script async src='/touch.js'></script>
+    <link async rel="stylesheet" href="/cdn/css/chat.css" media="all">
+    <link async rel="stylesheet" href="/cdn/css/home.css" media="all">
+    <link async rel="stylesheet" href="/cdn/css/room.css" media="all">
+    <script src="/cdn/js/firebase-app.js"></script>
+    <script src="/cdn/js/firebase-auth.js"></script>
+    <script src="/cdn/js/socket.io.min.js"></script>
+    <script src="/cdn/js/webrtc.min.js"></script>
+    <script async src='/cdn/js/auth.js'></script>
+    <script async src='/cdn/js/room.js'></script>
+    <script async src='/cdn/js/touch.js'></script>
+    <script async src='/cdn/js/router.js'></script>
+    <script async src='/cdn/js/touch.js'></script>
     <script async src='/index.js'></script>
   </head>
 
@@ -82,83 +82,11 @@
           <card class="card">
               <div class="text-1">Peer-to-peer Serverless Video Chat</div>
               <div class="text-2">No more bills, just cam up, and host yourself!</div>
-              <form class="create-room flex" onsubmit="event.preventDefault(); alert('/'+event.target.children[0].value+'/'); ('/'+event.target.firstElementChild.value+'/').router();">
+              <form class="create-room flex" onsubmit="event.preventDefault(); ('/'+event.target.firstElementChild.value+'/').router();">
                   <input autocomplete="off" autocorrect="off" type="text" placeholder="Choose a room name">
                   <input type="submit" value="Start Chatting">
               </form>
           </card>
-      </section>
-
-      <rooms class="rooms" id="rooms"><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-          --><room><icon></icon><info></info></room><!--
-      --></rooms>
-
-      <section class="centered flex section section-plans">
-      </section>
-
-      <section class="centered flex section section-about">
-      </section>
-
-      <section class="centered flex section section-pages">
       </section>
     </main>
 
