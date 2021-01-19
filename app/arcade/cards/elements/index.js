@@ -1,8 +1,47 @@
 window.onload = () => {
 
-    ajax('cdn/json/deck.starter.json').then((j,json=JSON.parse(j)) => { console.log('deck',{json});
+    phase.setup();
 
-        var cards = Object.keys(json);
+}
+
+window.query = {
+  shuffle: {
+    obj: (numbers) => {
+      
+      numbers = query.shuffle.arr(Object.values(numbers));
+      console.log(numbers);
+
+    },
+    arr: (a) => {
+      for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+  }
+}
+
+window.deck = {
+
+    create: (pack) => {
+        return new Promise((resolve,reject) => {
+
+            ajax('cdn/json/deck.'+pack+'.json').then((j,json=JSON.parse(j)) => { console.log('deck',{json});
+
+                window.pack = json;
+                var cards = Object.keys(json);
+
+                resolve(cards);
+
+            });
+
+        });
+    },
+
+    shuffle: (cards) => {
+        
+        var json = window.pack;
         var shuffle = query.shuffle.arr(cards);        
         const deck = Math.ceil(shuffle.length / 2);    
         const deck1 = shuffle.splice(0, deck);
@@ -37,36 +76,6 @@ window.onload = () => {
         d2++; } while(d2 < deck2.length);
         byId('deck-two').innerHTML = html2;
 
-    });
-
-}
-
-window.query = {
-  shuffle: {
-    obj: (numbers) => {
-      
-      numbers = query.shuffle.arr(Object.values(numbers));
-      console.log(numbers);
-
-    },
-    arr: (a) => {
-      for (let i = a.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [a[i], a[j]] = [a[j], a[i]];
-      }
-      return a;
-    }
-  }
-}
-
-window.deck = {
-
-    create: () => {
-
-    },
-
-    shuffle: () => {
-
     },
 
     draw: () => {
@@ -74,7 +83,19 @@ window.deck = {
     },
 
     reset: () => {
-        
+
+    }
+
+}
+
+window.phase = {
+
+    setup: async() => {
+
+        var cards = await deck.create('starter');
+
+        deck.shuffle(cards);
+
     }
 
 }
