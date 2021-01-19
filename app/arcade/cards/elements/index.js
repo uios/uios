@@ -14,7 +14,7 @@ window.onload = () => {
             html1 += `<card data-color="`+color+`" data-name="`+name+`" data-power="`+power+`">`;
                 html1 += `<section class="faces face-down">`;
                     html1 += `<div class="face front">`;
-                        html1 += `<div class="name">`+name+`</div>`;
+                        //html1 += `<div class="name">`+name+`</div>`;
                         html1 += `<div class="power">`+power+`</div>`;
                     html1 += `</div>`;
                     html1 += `<div class="face back">`+`</div>`;
@@ -28,7 +28,7 @@ window.onload = () => {
             html2 += `<card data-color="`+color+`" data-name="`+name+`" data-power="`+power+`">`;
                 html2 += `<section class="faces face-down">`;
                     html2 += `<div class="face front">`;
-                        html2 += `<div class="name">`+name+`</div>`;
+                        //html2 += `<div class="name">`+name+`</div>`;
                         html2 += `<div class="power">`+power+`</div>`;
                     html2 += `</div>`;
                     html2 += `<div class="face back"></div>`;
