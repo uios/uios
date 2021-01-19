@@ -5,6 +5,12 @@ https://arcade.uios.app/elements/* /app/arcade/elements/:splat 200
 https://arcade.uios.app/findingyou/* /app/arcade/findingyou/:splat 200
 https://arcade.uios.app/* /app/arcade/index.html 200
 
+https://elements.uios.app /app/elements/index.html 200
+https://elements.uios.app/index.css /app/elements/index.css 200
+https://elements.uios.app/index.js /app/elements/index.js 200
+https://elements.uios.app/cdn/* /app/elements/cdn/:splat 200
+https://elements.uios.app/* /app/elements/index.html 200
+
 https://calculator.uios.app /app/calculator/index.html 200
 https://calculator.uios.app/index.css /app/calculator/index.css 200
 https://calculator.uios.app/index.js /app/calculator/index.js 200
