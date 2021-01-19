@@ -1,7 +1,7 @@
 https://arcade.uios.app /app/arcade/index.html 200
 https://arcade.uios.app/index.css /app/arcade/index.css 200
 https://arcade.uios.app/index.js /app/arcade/index.js 200
-https://arcade.uios.app/cards/* /app/arcade/cards/:splat 200
+https://arcade.uios.app/elements/* /app/arcade/elements/:splat 200
 https://arcade.uios.app/findingyou/* /app/arcade/findingyou/:splat 200
 https://arcade.uios.app/* /app/arcade/index.html 200
 
