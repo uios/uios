@@ -1,3 +1,4 @@
+https://arcade.uios.app/elements/* /app/arcade/elements/:splat 200
 https://arcade.uios.app/elements/cdn/* /app/arcade/elements/cdn/:splat 200
 https://arcade.uios.app/findingyou/* /app/arcade/findingyou/:splat 200
 
