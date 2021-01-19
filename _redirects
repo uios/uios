@@ -1,6 +1,6 @@
 https://arcade.uios.app /app/arcade/index.html 200
-https://arcade.uios.app/elements https://arcade.uios.app/elements/ 200
 https://arcade.uios.app/elements/* /app/arcade/elements/:splat 200
+https://arcade.uios.app/elements https://arcade.uios.app/elements/ 301!
 
 https://elements.uios.app /app/elements/index.html 200
 https://elements.uios.app/index.css /app/elements/index.css 200
