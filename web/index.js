@@ -2,6 +2,8 @@ window.addEventListener("popstate", e => (e.state ? e.state.router({pop:true}) :
 
 window.mvc = { };
 
+window.onload = init;
+
 function init() {
     
   return new Promise((resolve, reject) => {
@@ -36,17 +38,6 @@ function init() {
     //dom.popup.addEventListener("touchstart", on.touch, {passive: true});
     //dom.popup.addEventListener("touchmove", on.touch, {passive: true});
 
-    //dom.main.addEventListener("touchstart", on.touch, {passive: true});
-    //dom.main.addEventListener("touchmove", on.touch, {passive: true});
-    
-    //dom.header.addEventListener("touchstart", on.touch, {passive: true});
-    //dom.header.addEventListener("touchmove", on.touch, {passive: true});
-                                   
-    //dom.footer.addEventListener("touchstart", on.touch, {passive: true});
-    //dom.footer.addEventListener("touchmove", on.touch, {passive: true});
-
   });
 
 }
-
-window.onload = init;

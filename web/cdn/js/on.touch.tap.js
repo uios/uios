@@ -10,6 +10,8 @@ window.on['touch']["tap"] = (ev,t) => {
     var ie = target.closest('[id]');
     var id = ie.id;
 
+    var dataset = target.dataset;
+
     var elem = target.closest('[data-evt]');
     var evt = elem ? elem.dataset.evt : null;
 
@@ -22,6 +24,12 @@ window.on['touch']["tap"] = (ev,t) => {
         }
         if(evt === 'app') {
             if(className === 'exit') { elem.remove(); }
+        }
+        if(evt === "auth") {
+            var provider = dataset.provider; alert(provider);
+            if(provider === "google") {
+                
+            }
         }
         if(evt === 'search') {
             if(className === 'icon') {
