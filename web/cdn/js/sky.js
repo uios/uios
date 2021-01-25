@@ -1,3 +1,5 @@
+// http://suncalc.net/
+
 // gradient colors from https://cdpn.io/rDEAl
 var grads = [
   [
@@ -113,6 +115,8 @@ var grads = [
   ]
 ];
 
+// "linear-gradient(to bottom, #020111 85%,#191621 100%)"
+// {color:"20202c",position:0},{color:"515175",position:100}
 function toCSSGradient(data) {
   var css = "linear-gradient(to bottom, ";
   var len = data.length;
@@ -131,34 +135,7 @@ function updateTime() {
 }
 
 function updateBasedOnNow() {
-
-  d = new Date ();
-  
-  var currentHours = d.getHours ( );
-  var currentMinutes = d.getMinutes ( );
-  var currentSeconds = d.getSeconds ( );
-  setCSSGradientByIndex(currentHours);
-
-  currentMinutes = pad(currentMinutes,2);
-  currentSeconds = pad(currentSeconds,2);
-
-  var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
-  currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
-  currentHours = ( currentHours == 0 ) ? 12 : currentHours;
-
-  // Compose the string for display
-  var dString = currentHours + ":" + currentMinutes + " " + timeOfDay;
-
-  // Update the time display  
-  var day = global.day[d.getDay()];
-  var month = global.month[d.getMonth()];
-  var date = d.getDate(); 
-  var stamp = day + ', ' + month + ' ' + date;
-
-  document.getElementById("time").textContent = dString;
-  document.getElementById("date").textContent = stamp;
-  console.log(stamp+" "+dString);
-
+  setCSSGradientByIndex(updateTime());
 }
 
 function setCSSGradientByIndex(nInx) {
@@ -174,13 +151,16 @@ function setCSSGradientByIndex(nInx) {
     ba.style.backgroundImage = "-webkit-" + css;
     ba.style.backgroundImage = "-moz-" + css;
     ba.style.backgroundImage = "" + css;
+
   }
+  console.log(d.getHours()+":"+d.getMinutes+":"+d.getSeconds());
 }
 
 // props
 var d = new Date();
 var h = updateTime();
 var inx = -1;
+var defaultLocation = { coords: { latitude: 40.7144, longitude: -74.006 } };
 
 setCSSGradientByIndex(h);
 

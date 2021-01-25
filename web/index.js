@@ -1,7 +1,5 @@
 window.addEventListener("popstate", e => (e.state ? e.state.router({pop:true}) : null));
 
-window.mvc = { };
-
 window.onload = init;
 
 function init() {
@@ -28,8 +26,6 @@ function init() {
             goto.router();
         });
     });
-
-    updateClock(); setInterval('updateClock()', 1000);
                             
     dom.body.onclick = event => on.touch.tap(event,'tap');
 

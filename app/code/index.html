@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Frontend Editor</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>  
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.16.0/codemirror.js'></script>    
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.16.0/codemirror.css' rel='stylesheet'> 
+    
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/theme/abcdef.min.css' rel='stylesheet'>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rest.js/15.0.2/octokit-rest.min.js" integrity="sha512-Sr9H+XjDgAtZDtuPsMTJ5iWtXksOZlx6XmF2tpZi7iSr3IWqQsGj86l7lZZwpXHEpXmvv05luwfiOUO0wYYpWA==" crossorigin="anonymous"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/fold/foldcode.js" integrity="sha512-VW3/y44dtyFYaOikJ1zSwM1o+/ErlidCA7PN3jPYEyHR5RNvP+NvWqOxrqf9/k0Y5yFLtdurypKFwm+jE8lgkA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/fold/foldgutter.min.js" integrity="sha512-Yhrn0zU9jQBETdu3RUw6Rl+pSPWNl8xDxjiJkds2xNQapiaCiBX0et1ecl8VqUM421uWRwoa0ynzZ5knY8zt9w==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/fold/indent-fold.min.js" integrity="sha512-Q6g5qQfa6ko+Y+0BwAciUAq01qxgfScTPFP2Fsrr+zIrTe5Yq3tN5xaA919MmBs/1RMz/jyctknYavjc3k+/xg==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/css/css.min.js" integrity="sha512-rsFXL+3jYau54xgkx2FtVPo+yRM4vLMEU9VBWl8hZX+t8MEYzGBHeHh5ELv04uthHqix7Dhw2o4KgQ1c+s6dEQ==" crossorigin="anonymous"></script>   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js" integrity="sha512-+tn2IYnLwD2J9p6Nrn/Dl7ag9lluHA0GAblT/vnMiJV8DU/iDsldgf+9XbEqZUee2ThyDtfmSDb+IDZ9u7jrSA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/htmlmixed/htmlmixed.min.js" integrity="sha512-IC+qg9ITjo2CLFOTQcO6fBbvisTeJmiT5D5FnXsCptqY8t7/UxWhOorn2X+GHkoD1FNkyfnMJujt5PcB7qutyA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/xml/xml.min.js" integrity="sha512-XPih7uxiYsO+igRn/NA2A56REKF3igCp5t0W1yYhddwHsk70rN1bbbMzYkxrvjQ6uk+W3m+qExHIJlFzE6m5eg==" crossorigin="anonymous"></script>
+	
+  <style id="css"></style>
+</head>
+
+<body class="body layout-side layout-left" id="body" data-page="/code/">  
+
+  <main class="main" id="main">
+    <section class="page page-index" id="page-index">
+      <div class="isauth"></div>
+      <div class="noauth">
+        <div></div>          
+      </div>
+    </section>
+
+    <section class="page page-code" id="page-code">      
+      <header class="header">
+        <section class="project">
+          <span class="logo" data-href="/"><div class="left side"></div><div class="right side"></div></span>
+          <span class="info">
+            <div class="project-name" placeholder="Untitled"></div>
+            <div class="project-user" placeholder="Anonymous"></div>          
+          </span>
+        </section>
+        <section class="menu">
+          <div class="love"></div>
+          <div class="save"></div>
+          <div class="edit"></div>
+          <div class="view"></div>
+          <div class="pins"></div>
+          <div class="user"></div>
+        </section>
+      </header>    
+
+      <aside class="code" id="code">
+        <section class="editor">
+          <div class="editor-resizer"></div>
+          <div class="editor-div editor-html">
+            <header class="editor-header">
+              <div>HTML</div>       
+              <div class="more"></div>
+            </header>
+            <section class="editor-section">
+              <div class="section-div" id="html-editor"></div>            
+            </section>
+          </div>
+          <div class="editor-resizer"></div>
+          <div class="editor-div editor-css">
+            <header class="editor-header">
+              <div>CSS</div>       
+              <div class="more"></div>            
+            </header>
+            <section class="editor-section">
+              <div class="section-div" id="css-editor"></div>            
+            </section>
+          </div>
+          <div class="editor-resizer"></div>
+          <div class="editor-div editor-js">
+            <header class="editor-header">
+              <div>JS</div>       
+              <div class="more"></div>
+            </header>
+            <section class="editor-section">
+              <div class="section-div" id="js-editor"></div>            
+            </section>
+          </div>
+        </section>
+      </aside>
+      <div class="resizer" id="resizer"></div> 
+
+      <div class="preview"><iframe class="preview-code" id="preview-code"></iframe></div>                  
+    </section>
+
+    <section class="page page-ide" id="page-ide"></section>
+  </main>
+
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
