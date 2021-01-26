@@ -1,5 +1,5 @@
 window.onload = () => {
-  
+
   window.cm = {};
   window.dom = {
     "style": document.getElementById("css"),
@@ -19,13 +19,13 @@ window.onload = () => {
       }
     }
   };
-  
+
   pvw();
   function pvw() {
     dom.iframe.code.doc = document.getElementById("preview-code").contentDocument;
     dom.iframe.code.head = document.getElementById("preview-code").contentDocument.querySelector('head');
     dom.iframe.code.head.innerHTML = '<style id="style"></style>';
-    dom.iframe.code.style = dom.iframe.code.head.querySelector('style');   
+    dom.iframe.code.style = dom.iframe.code.head.querySelector('style');
     dom.iframe.code.body = document.getElementById("preview-code").contentDocument.querySelector('body');
   }
   function upd() {
@@ -37,36 +37,36 @@ window.onload = () => {
     dom.iframe.code.style.textContent = css;
     dom.iframe.code.elem.src = page;
   }
-  
+
   cm.html = CodeMirror(dom.html, {
     lineNumbers: true,
     lineWrapping: true,
     htmlMode: true,
-    mode: 'xml',  
+    mode: 'xml',
     styleActiveLine: true,
     theme: 'abcdef',
     matchBrackets: true
   });
-  cm.html.on("change",(change) => { 
+  cm.html.on("change",(change) => {
     upd();
   });
-  
+
   cm.css = CodeMirror(dom.css, {
     lineNumbers: true,
     lineWrapping: true,
-    mode: 'css',  
+    mode: 'css',
     styleActiveLine: true,
     theme: 'abcdef',
     matchBrackets: true
   });
-  cm.css.on("change",(change) => { 
+  cm.css.on("change",(change) => {
     upd();
   });
-  
+
   cm.js = CodeMirror(dom.js, {
     lineNumbers: true,
     lineWrapping: true,
-    mode: 'javascript',  
+    mode: 'javascript',
     styleActiveLine: true,
     theme: 'abcdef',
     matchBrackets: true
@@ -74,7 +74,7 @@ window.onload = () => {
   cm.js.on("change",(change) => {
     upd();
   });
-  
+
   /*RESIZER*/
   let m_pos;
   function resize(e) {
@@ -83,7 +83,7 @@ window.onload = () => {
     dom.code.style.width = (parseInt(getComputedStyle(dom.code, '').width) + dx) + "px";
     //console.log({m_pos,x:e.x},dx);
   }
-  dom.resize.code.addEventListener("mousedown", function(e){ 
+  dom.resize.code.addEventListener("mousedown", function(e){
     //console.log(e.offsetX);
     if (e.offsetX < dom.resize.code.clientWidth) {
       m_pos = e.x;
@@ -94,10 +94,10 @@ window.onload = () => {
   document.addEventListener("mouseup", function(){
     body.classList.remove('dragging');
     document.removeEventListener("mousemove", resize, false);
-  }, false); 
+  }, false);
   /*RESIZER*/
-  
-  /*BLOB*/  
+
+  /*BLOB*/
   function getBlobURL(code, type) {
     const blob = new Blob([code], { type });
     return URL.createObjectURL(blob);
@@ -109,7 +109,7 @@ window.onload = () => {
     <html>
       <head>
         ${css && `<link rel="stylesheet" type="text/css" href="${cssURL}" />`}
-        ${js && `<script src="${jsURL}"><//script>`}
+        ${js && `<script src="${jsURL}"></script>`}
       </head>
       <body>
         ${html || ''}
@@ -118,5 +118,5 @@ window.onload = () => {
   `;
     return getBlobURL(source, 'text/html');
   }
-  
+
 };
