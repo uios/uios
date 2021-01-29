@@ -23,7 +23,7 @@ window.onload = () => {
   pvw();
   function pvw() {
     dom.iframe.code.doc = document.getElementById("preview-code").contentDocument;
-    dom.iframe.code.head = document.getElementById("preview-code").contentDocument.querySelector('head');
+    dom.iframe.code.head = dom.iframe.code.doc.querySelector('head');
     dom.iframe.code.head.innerHTML = '<style id="style"></style>';
     dom.iframe.code.style = dom.iframe.code.head.querySelector('style');
     dom.iframe.code.body = document.getElementById("preview-code").contentDocument.querySelector('body');
