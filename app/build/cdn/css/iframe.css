@@ -27,7 +27,7 @@ body {
   background: whitesmoke;
 }
 .create.header, .create.empty-page {margin-top: 0px;margin-bottom: 20px;border-top: 1px dashed #bbb;border-bottom: 1px dashed #bbb;}
-.create.footer {margin-top: 0px;margin-bottom: 0px;}
+.create.footer {margin-top: 0px;margin-bottom: 50px;}
 
 .body-header:empty {
   position: relative;

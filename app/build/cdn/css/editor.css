@@ -12,18 +12,18 @@ nav {
 }
 nav {
   top: unset;
-  bottom: 120px;
+  bottom: 10px;
   left: 0;
   right: 0;
   margin: auto;
-  height: 100px;
-  width: 100px;
+  height: auto;
+  width: 200px;
 }
 
 
 nav > * {
   /* width: calc((100% - 0px)/2); */
-  width: 50%;
+  width: 50px;
   height: 50px;
   position: relative;
   /* float: left; */
