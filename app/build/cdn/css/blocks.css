@@ -2,7 +2,7 @@ block {
   display: block;
   /* min-height:240px; */
   position: relative;
-  margin: 30px 0px 0;
+  /* margin: 30px 0px 0; */
 }
 header block:before {
   content: '';
@@ -22,14 +22,14 @@ header block:before {
 page block:not([data-style]) {
   /* min-height: 50px; */
 }
-page block:before {
+page block card {
   content: '';
   display: block;
   margin: auto;
   height: 100%;
   width: 1280px;
   max-width: calc(100% - 0px);
-  box-shadow: 0 0 1px;
+  /* box-shadow: 0 0 1px; */
   position: absolute;
   top: 0;
   left: 0;

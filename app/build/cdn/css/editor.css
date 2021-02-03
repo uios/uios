@@ -11,7 +11,7 @@ nav {
   box-shadow: 0 0 1px;
 }
 nav {
-  top: unset;
+  top: 0;
   bottom: 10px;
   left: 0;
   right: 0;

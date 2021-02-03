@@ -23,25 +23,71 @@
             <div class="dots3"><a></a></div>
         </nav>
 
-        <section class="create header" data-before="Add Header" data-element="header" data-evt="create"></section>
+        <block class="create header" data-element="header" data-evt="create">
+            <section>
+                <div class="create create-header" data-element="header">
+                    <header>Add a header at the top of the template.</header>
+                    <section><icon class="icon create-section"></icon></section>
+                    <footer data-element="block"><xmp><header></header></xmp></footer>
+                </div>
+            </section>
+        </block>
         
-        <section class="create nav" data-before="Add Nav" data-element="nav" data-evt="create"></section>
+        <block class="create nav" data-element="nav" data-evt="create">
+            <section>
+                <div class="create create-nav" data-element="nav">
+                    <header>Create a global navigation menu.</header>
+                    <section><icon class="icon create-section"></icon></section>
+                    <footer data-element="block"><xmp><nav></nav></xmp></footer>
+                </div>
+            </section>
+        </block>
+
+        <block class="create section" data-element="section" data-evt="create">
+            <section>
+                <div class="create create-footer" data-element="footer">
+                    <header>Place a new section near the header.</header>
+                    <section><icon class="icon create-section"></icon></section>
+                    <footer data-element="block"><xmp><section></section></xmp></footer>
+                </div>
+            </section>
+        </block>
 
         <main class="body-main main">
-            <page class="main-page page">
-                <div class="empty-page" data-evt="create">
+            <page class="page page-index" data-page="/" data-path="/">
+                <block class="create empty-page" data-evt="create">
                     <section>
-                        <div>
-                            <header>Add a section to the page to get started.</header>
-                            <footer data-element="div">Create Element</footer>
-                        </div>
+                        <section>
+                            <div class="create create-div">
+                                <header>Put a block on the page for new content.</header>
+                                <section><icon class="icon create-section"></icon></section>
+                                <footer data-element="div"><xmp><div></div></xmp></footer>
+                            </div>
+                        </section>
                     </section>
-                    <section class="insert" data-element="block"></section>
-                </div>
+                </block>
             </page>
         </main>
 
-        <section class="create footer" data-before="Add Footer" data-element="footer" data-evt="create"></section>
+        <block class="create section" data-element="section" data-evt="create">
+            <section>
+                <div class="create create-footer" data-element="footer">
+                    <header>Place a new section near the footer.</header>
+                    <section><icon class="icon create-section"></icon></section>
+                    <footer data-element="block"><xmp><section></section></xmp></footer>
+                </div>
+            </section>
+        </block>
+
+        <block class="create footer" data-element="footer" data-evt="create">
+            <section>
+                <div class="create create-footer" data-element="footer">
+                    <header>Add a footer at the bottom of the template.</header>
+                    <section><icon class="icon create-section"></icon></section>
+                    <footer data-element="block"><xmp><footer></footer></xmp></footer>
+                </div>
+            </section>
+        </block>
 
         <template id="template-header"></template>
         <template id="template-section"></template>
