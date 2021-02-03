@@ -10,25 +10,20 @@ nav {
   background: rgba(255,255,255,1.5);
   box-shadow: 0 0 1px;
 }
-@media screen and (max-width: 640px) {
-  nav {
-    top: unset;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 50px;
-    width: 200px;
-  }
-  nav > * {
-    width: 25%;
-  }
+nav {
+  top: unset;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 200px;
 }
 
 
 nav > * {
   /* width: calc((100% - 0px)/2); */
-  width: 100%;
+  width: 25%;
   height: 50px;
   position: relative;
   float: left;
@@ -118,7 +113,7 @@ nav > .pages a {
     right: 0;
     bottom: 0;
     margin: auto;
-    width: 50%;
+    width: calc(100%/3);
     height: 1px;
     z-index: 12;
     position: relative;
