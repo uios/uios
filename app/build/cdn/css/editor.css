@@ -13,8 +13,8 @@ nav {
 nav {
   top: unset;
   bottom: 10px;
-  left: 0;
-  right: 0;
+  left: 10px;
+  right: unset;
   margin: auto;
   height: auto;
   width: 200px;
