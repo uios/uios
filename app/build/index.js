@@ -7,6 +7,8 @@ window.onload = () => {
   };
 
   dom.doc.onclick = event => on.touch.tap(event);
+  
+  dom.body.classList.remove('loading');
 
   /*BLOB*/  
   

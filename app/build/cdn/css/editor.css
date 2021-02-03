@@ -1,4 +1,4 @@
-.bottom-right {right: 10px;bottom: 10px;margin: 0;width: 100px;left: unset;}
+.bottom-right {right: 10px;bottom: 10px;margin: 0;width: 50px;left: unset;}
 nav {
   width: 50px;
   position: fixed;
@@ -148,6 +148,57 @@ nav > .pages a:after {
     content: '';
     background: #bbb;
     border-radius: 10px;
+}
+
+nav > .media {
+  /* display: inline-flex; */
+  /* display: -webkit-inline-flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+nav > .media a {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: calc(100%/3);
+    height: 1px;
+    z-index: 12;
+    position: relative;
+    display: block;
+    content: '';
+    overflow: visible;
+    border-radius: 20px;
+}
+nav > .media a:before {
+    /* left: 0; */
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    height: 35%;
+    z-index: 12;
+    position: absolute;
+    display: block;
+    content: '';
+    background: #bbb;
+    border-radius: 10px;
+    transform: rotate(0deg);
+}
+nav > .media a:after {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 75%;
+    z-index: 12;
+    position: absolute;
+    display: block;
+    content: '';
+    background: #bbb;
+    border-radius: 10px;
+    transform: rotate(90deg);
 }
 
 nav > .files:after {
