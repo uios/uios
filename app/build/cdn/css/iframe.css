@@ -141,6 +141,7 @@ page {
   z-index: 1;
   display: flex;
   /* box-shadow: 0 0 1px; */
+  overflow: visible;
 }
 
 .body-footer:empty {

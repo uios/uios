@@ -1,23 +1,22 @@
+.bottom-right {right: 10px;bottom: 10px;margin: 0;width: 100px;left: unset;}
 nav {
   width: 50px;
   position: fixed;
-  top: 0;
+  top: unset;
   left: 0;
-  bottom: 0;
+  bottom: 10px;
   height: 200px;
   z-index: 123;
-  margin: auto 5px;
+  margin: auto;
   background: rgba(255,255,255,1.5);
   box-shadow: 0 0 1px;
 }
 nav {
-  top: unset;
-  bottom: 10px;
   left: 10px;
   right: unset;
-  margin: auto;
+  /* margin: auto; */
   height: auto;
-  width: 200px;
+  width: 150px;
 }
 
 
@@ -175,6 +174,7 @@ nav > .dots3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: white;
 }
 nav > .dots3 a {
     left: 0;

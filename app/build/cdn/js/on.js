@@ -13,12 +13,12 @@ window.on = {
 
             if (el) {
 
-              var evt = el.dataset.evt;
-
-              if (evt === "block") {    
-                if(target.dataset && target.dataset.element) {  
-                  var tagName = target.closest('.block').tagName;
-                  var element = ``;
+              var evt = el.dataset.evt; alert(evt);
+              
+              if (evt === "create") {    
+                var ement = target.closest('[data-element]');
+                if(ement) {  
+                  var tagName = el.dataset.ement; alert(tagName);
                   element = `<`+tagName+` class="block">`;
                     element += `<header class="block-header header"><section>Element 1</section></header>`;
                     element += `<section class="block-section `+tagName+`"></section>`;
@@ -26,7 +26,7 @@ window.on = {
                       element += `<div class="create" data-crud="create"></div>`;
                       element += `<div class="delete" data-crud="delete"></div>`;
                     element += `</section></footer>`;
-                  element += `</`+tagName+`>`;
+                  element += `</`+tagName+`>`; alert(tagName);
                   el.closest('.page').firstElementChild.insertAdjacentHTML('beforebegin',element);   
                 }
               }
