@@ -1,37 +1,16 @@
-html, body {
+html {
   height: 100%;
 }
 body {
   margin: 0;
   font-family: Arial;
+  padding-bottom: 80px;
 }
 
-nav {
-  width: 50px;
-  height: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 123;
-  margin: 5px;
-  background: rgba(255,255,255,.5);
-  box-shadow: 0 0 1px;
-}
-@media screen and (max-width: 640px) {
-  nav {
-    top: unset;
-    bottom: 0;
-    left: 0;
-    margin: 10px;
-    height: 50px;
-    width: calc(100% - 20px);
-  }
-}
 
-.create {
+.create.header, .create.footer {
     display: flex;
     background: rgba(255,255,255,calc(1/3));
-    box-shadow: 0 0 0 1px #bbb;
     transition: 0.3s all;
     justify-content: center;
     width: 100%;
@@ -40,14 +19,10 @@ nav {
     position: relative;
     align-items: center;
 }
-.create:before {
-    border: 1px solid #bbb; padding: 20px 40px;
-  background: white;
+.block .block-footer > * > *:hover {
+  background: whitesmoke;
 }
-.create:hover {
-  background: #bbb;
-}
-.create.header { margin-bottom: 30px; }
+.create.header {/* margin-top: 70px; */margin-bottom: 30px;}
 .create.footer { margin-top: 30px; }
 
 .body-header:empty {
@@ -58,9 +33,14 @@ nav {
 }
 
 main {
-  min-height: calc(100% - 300px);
-  min-height: 320px;
+  /* min-height: calc(100% - 480px); */
+  /* min-height: 320px; */
   position: relative;
+  /* height: 100%; */
+}
+
+page {
+  display: block;
 }
 
 .empty-page:first-child {
@@ -70,22 +50,23 @@ main {
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    position: absolute;
+    position: relative;
     width: 100%;
     margin: 0px auto;
 }
 .empty-page > * {
-    width: 240px;
+    width: 200px;
+    margin: 50px 0;
 }
 .empty-page header {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 20px;
     text-align: center;
 }
 .empty-page footer {
   border: 1px solid #bbb;
   text-align: center;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   line-height: 50px;
   height: 50px;
 }
@@ -95,58 +76,44 @@ main {
   display: none;
 }
 
-block {
-  display: block;
-  /* min-height:240px; */
-  position: relative;
-  margin: 30px 0px 0;
+
+
+.block {
+  /* margin: 20px; */
+  /* box-shadow: 0 0 4px; */
 }
-header block:before {
-  content: '';
-  display: block;
-  margin: auto;
-  height: 100%;
-  width: 50px;
-  max-width: calc(100% - 40px);
-  box-shadow: 0 0 1px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 0px;
-}
-page block:not([data-style]) {
+.block .div {
   min-height: 50px;
 }
-page block:before {
-  content: '';
-  display: block;
-  margin: auto;
-  height: 100%;
-  width: 1280px;
-  max-width: calc(100% - 20px);
-  box-shadow: 0 0 1px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 0px;
-}
 
-.insert {box-shadow: 0 0 1px;width: calc(100% - 20px);/* width: 120px; */height: 30px;position: relative;margin: auto;}
-.insert:before {
+.block .block-header {/* box-shadow: 0 0 1px; */width: calc(100% - 20px);width: 100%;height: 30px;position: relative;}
+
+.block .block-header > section, .block .block-footer > section {background: white;width: calc(100% - 20px);width: auto;/* height: 30px; *//* line-height: 30px; */position: relative;margin: auto 10px 0 auto;display: flex;display: -webkit-flex;box-shadow: 0 0 1px;}
+.block .block-header > section {margin: 0 auto 0 10px;padding: 0 10px;font-size: 14px;line-height: 30px;} 
+.block .block-footer > section {margin: auto 10px auto auto;} 
+
+.block-header:before, .block-footer:before {
   content: '';
   display: block;
-  width: 90px;
-  height: 30px;
+  width: 100%;
+  height: 1px;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
+  border-bottom: 1px dashed #bbb;
+}
+.block-header, .block-footer {
+  width: 100%;
+  height: 50px;
+  margin: auto 10px auto auto;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  /* box-shadow: 0 0 1px; */
 }
 
 .body-footer:empty {

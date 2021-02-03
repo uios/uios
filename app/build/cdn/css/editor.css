@@ -1,0 +1,230 @@
+nav {
+  width: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 200px;
+  z-index: 123;
+  margin: auto 5px;
+  background: rgba(255,255,255,1.5);
+  box-shadow: 0 0 1px;
+}
+@media screen and (max-width: 640px) {
+  nav {
+    top: unset;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 200px;
+  }
+  nav > * {
+    width: 25%;
+  }
+}
+
+
+nav > * {
+  /* width: calc((100% - 0px)/2); */
+  width: 100%;
+  height: 50px;
+  position: relative;
+  float: left;
+}
+@media screen and (max-width: 640px) {
+  nav > * {
+    width: 25%;
+  }
+}
+
+nav > *:hover {
+  background: whitesmoke;
+}
+nav > a:before, nav > a:after {
+  /* width: 50%; */
+  /* height: 6px; */
+  display: block;
+  margin: 6px auto;
+  content: '';
+}
+nav > * {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav > .board {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav > .board a {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1px;
+    height: 50%;
+    z-index: 12;
+    position: relative;
+    display: block;
+    background: #bbb;
+    content: '';
+    overflow: visible;
+    border-radius: 20px;
+}
+nav > .board a:before {
+    /* left: 0; */
+    left: -750%;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 35%;
+    z-index: 12;
+    position: absolute;
+    display: block;
+    content: '';
+    background: #bbb;
+    border-radius: 10px;
+}
+nav > .board a:after {
+    right: -750%;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 75%;
+    z-index: 12;
+    position: absolute;
+    display: block;
+    content: '';
+    background: #bbb;
+    border-radius: 10px;
+}
+
+nav > .pages {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav > .pages a {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50%;
+    height: 1px;
+    z-index: 12;
+    position: relative;
+    display: block;
+    background: #bbb;
+    content: '';
+    overflow: visible;
+    border-radius: 20px;
+}
+nav > .pages a:before {
+    /* left: 0; */
+    top: -750%;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    height: 35%;
+    z-index: 12;
+    position: absolute;
+    display: block;
+    content: '';
+    background: #bbb;
+    border-radius: 10px;
+}
+nav > .pages a:after {
+    bottom: -750%;
+    margin: auto;
+    width: 100%;
+    height: 75%;
+    z-index: 12;
+    position: absolute;
+    display: block;
+    content: '';
+    background: #bbb;
+    border-radius: 10px;
+}
+
+nav > .files:after {
+  content: '';
+  width: 40%;
+  height: 30%;
+  margin: 0 auto auto;
+  border: 1px solid #bbb;
+}
+nav > .files:before {
+  content: '';
+  width: 25%;
+  height: 6%;
+  transform: translate3d(1px, 1px, 0);
+  margin: auto auto 0 25%;
+  border: 1px solid #bbb;
+  border-bottom: 0;
+  z-index: 123;
+}
+
+nav > .dots3 {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav > .dots3 a {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 10%;
+    height: 10%;
+    z-index: 12;
+    position: relative;
+    display: block;
+    content: '';
+    overflow: visible;
+    border-radius: 20px;
+    border: 1px solid #bbb;
+    /* background: #bbb; */
+}
+nav > .dots3 a:before {
+    left: -1px;
+    top: -200%;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    position: absolute;
+    display: block;
+    content: '';
+    /* background: #bbb; */
+    border-radius: 10px;
+    border: 1px solid #bbb;
+}
+nav > .dots3 a:after {
+    left: -1px;
+    bottom: -200%;
+    /* margin: auto; */
+    width: calc(100% + 0px);
+    height: calc(100% + 0px);
+    z-index: 12;
+    position: absolute;
+    display: block;
+    content: '';
+    /* background: #bbb; */
+    border-radius: 10px;
+    border: 1px solid #bbb;
+}
+/*NAV*/
+
+/*PAGE*/

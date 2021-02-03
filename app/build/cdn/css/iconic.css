@@ -1,0 +1,22 @@
+.dots {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: black;
+  position: relative;
+}
+.dots:before, .dots:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: black;
+  position: absolute;
+  border-radius: 50%;
+}
+.dots:before {
+  top: 150%;
+}
+.dots:after {
+  bottom: 150%;
+}

@@ -4,15 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
         <title>Build</title>
-        <link rel="stylesheet" href="./cdn/css/iframe.css">
+        <link rel="stylesheet" href="./cdn/css/editor.css">  
+        <link rel="stylesheet" href="./cdn/css/iframe.css">   
+        <link rel="stylesheet" href="./cdn/css/blocks.css">  
+        <link rel="stylesheet" href="./cdn/css/iconic.css">         
+        <script src="./index.js"></script>
+        <script src="./cdn/js/on.js"></script>
+        <script src="./cdn/js/popup.js"></script>
     </head>
-    <body class="body">
+    <body class="body loading" data-page="/">
+
+        <boot><img class="icon load anim-rotate"></boot>
     
-        <nav>
-            <div class="pages"></div>
-            <div class="theme"></div>
-            <div class="files"></div>
-            <div class="about"></div>
+        <nav class="body-nav">
+            <div class="pages"><a></a></div>
+            <div class="board"><a></a></div>
+            <div class="files"><a></a></div>
+            <div class="dots3"><a></a></div>
         </nav>
 
         <section class="create header" data-before="Add Header" data-element="header" data-evt="create"></section>
@@ -23,7 +31,7 @@
                     <section>
                         <div>
                             <header>Add a section to the page to get started.</header>
-                            <footer data-element="block">Create Element</footer>
+                            <footer data-element="div">Create Element</footer>
                         </div>
                     </section>
                     <section class="insert" data-element="block"></section>
@@ -32,9 +40,10 @@
         </main>
 
         <section class="create footer" data-before="Add Footer" data-element="footer" data-evt="create"></section>
+
         <template id="template-header"></template>
         <template id="template-section"></template>
         <template id="template-div"></template>
-        <script src="./cdn/js/iframe.js"></script>
+
     </body>
 </html>
