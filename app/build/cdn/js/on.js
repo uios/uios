@@ -15,16 +15,16 @@ window.on = {
 
               var evt = el.dataset.evt;
 
-              if (evt === "create") {    
+              if (evt === "block") {    
                 if(target.dataset && target.dataset.element) {  
-                  var tagName = target.dataset.element;
+                  var tagName = target.closest('.block').tagName;
                   var element = ``;
                   element = `<`+tagName+` class="block">`;
                     element += `<header class="block-header header"><section>Element 1</section></header>`;
                     element += `<section class="block-section `+tagName+`"></section>`;
                     element += `<footer class="block-footer insert"><section data-evt="block">`;
-                      element += `<div class="create" data-evt="create" data-element="block"></div>`;
-                      element += `<div class="delete"></div>`;
+                      element += `<div class="create" data-crud="create"></div>`;
+                      element += `<div class="delete" data-crud="delete"></div>`;
                     element += `</section></footer>`;
                   element += `</`+tagName+`>`;
                   el.closest('.page').firstElementChild.insertAdjacentHTML('beforebegin',element);   
@@ -33,7 +33,7 @@ window.on = {
 
             }
         }
-        
+
     }
 
 }

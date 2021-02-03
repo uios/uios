@@ -20,12 +20,13 @@ body {
     align-items: center;
     border-top: 1px dashed #bbb;
     border-bottom: 1px dashed #bbb;
+    margin-bottom: 10px;
 }
 .block .block-footer > * > *:hover {
   background: whitesmoke;
 }
-.create.header {/* margin-top: 70px; */margin-bottom: 30px;}
-.create.footer { margin-top: 30px; }
+.create.header {/* margin-top: 70px; */margin-bottom: 20px;}
+.create.footer {margin-top: 0px;}
 
 .body-header:empty {
   position: relative;
