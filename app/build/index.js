@@ -8,7 +8,7 @@ window.onload = () => {
 
   dom.doc.onclick = event => on.touch.tap(event);
   
-  dom.body.classList.add('ed');
+  dom.body.dataset.load = "ed";
 
   var path = (dom.body.dataset && dom.body.dataset.path ? dom.body.dataset.path : "/");
   path.router().then(document.body.classList.add('ed'));

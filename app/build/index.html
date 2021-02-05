@@ -7,11 +7,13 @@
         <link rel="stylesheet" href="./index.css">  
         <link rel="stylesheet" href="./cdn/css/editor.css">   
         <link rel="stylesheet" href="./cdn/css/blocks.css">  
-        <link rel="stylesheet" href="./cdn/css/iconic.css">         
-        <script src="./index.js"></script>
+        <link rel="stylesheet" href="./cdn/css/iconic.css">       
+        <script src="./index.js"></script>  
+        <script src="./cdn/js/jpurey.js"></script>   
         <script src="./cdn/js/on.js"></script>
         <script src="./cdn/js/modal.js"></script>
         <script src="./cdn/js/router.js"></script>
+        <script src="./cdn/js/editor.js"></script>
     </head>
     <body class="body loading" data-page="/"><!--
 
@@ -26,27 +28,27 @@
             --><div class="dots3"><a></a></div><!--
         --></nav><!--
 
-        --><block class="create header" data-element="header" data-evt="create">
+        --><block class="create header">
             <section>
-                <div class="create create-header" data-element="header">
+                <div class="create create-header">
                     <header>Add a header at the top of the template.</header>
                     <section><icon class="icon create-section"></icon></section>
-                    <footer data-element="block"><xmp><header></header></xmp></footer>
+                    <footer data-crud="create" data-elem="block"><xmp><header></header></xmp></footer>
                 </div>
             </section>
         </block><!--
         
-        --><block class="create nav" data-element="nav" data-evt="create">
+        --><block class="create nav">
             <section>
                 <div class="create create-nav" data-element="nav">
                     <header>Create a global navigation menu.</header>
                     <section><icon class="icon create-section"></icon></section>
-                    <footer data-element="block"><xmp><nav></nav></xmp></footer>
+                    <footer data-crud="create" data-elem="block"><xmp><nav></nav></xmp></footer>
                 </div>
             </section>
         </block><!--
 
-        --><block class="create section" data-element="section" data-evt="create">
+        --><block class="create section" data-element="section">
             <section>
                 <div class="create create-section" data-element="footer">
                     <header>Place a new section near the header.</header>
@@ -58,13 +60,13 @@
 
         <main class="body-main main">
             <page class="page page-index" data-page="/" data-path="/">
-                <block class="create empty-page" data-evt="create">
+                <block class="create empty-page">
                     <section>
                         <section>
-                            <div class="create create-div">
+                            <div class="create create-div" data-element="div">
                                 <header>Make a block for managing content.</header>
                                 <section><icon class="icon create-section"></icon></section>
-                                <footer data-element="div"><xmp><div></div></xmp></footer>
+                                <footer data-crud="create" data-elem="block"><xmp><div></div></xmp></footer>
                             </div>
                         </section>
                     </section>
@@ -72,7 +74,7 @@
             </page>
         </main>
 
-        <block class="create section" data-element="section" data-evt="create">
+        <block class="create section" data-element="section">
             <section>
                 <div class="create create-footer" data-element="footer">
                     <header>Place a new section near the footer.</header>
@@ -84,7 +86,7 @@
 
 
         
-        --><block class="create nav" data-element="nav" data-evt="create">
+        --><block class="create nav" data-element="nav">
             <section>
                 <div class="create create-nav" data-element="nav">
                     <header>Create a global navigation menu.</header>
@@ -94,7 +96,7 @@
             </section>
         </block><!--
 
-        --><block class="create footer" data-element="footer" data-evt="create">
+        --><block class="create footer" data-element="footer">
             <section>
                 <div class="create create-footer" data-element="footer">
                     <header>Add a footer at the bottom of the template.</header>
@@ -104,9 +106,16 @@
             </section>
         </block>
 
-        <template id="template-header"></template>
-        <template id="template-section"></template>
-        <template id="template-div"></template>
+        <template id="block-header"></template>
+
+        <template id="block-nav"></template>
+
+        <template id="block-section"></template>
+
+        <template id="block-div"></template>
+        <template id="block-div-section"><section class="block-section"></section></template>
+        
+        <template id="block-footer"></template>
 
     </body>
 </html>
