@@ -121,7 +121,7 @@ page {
 .block .block-section {margin: 10px;box-shadow: 0 0 1px #000;}
 .block .block-section:empty {min-height: 50px;}
 
-.block .block-header > section, .block .block-footer > section {background: white;width: calc(100% - 20px);width: auto;/* height: 30px; *//* line-height: 30px; */position: relative;margin: auto 10px 0 auto;display: flex;display: -webkit-flex;/* border: 1px solid #bbb; */box-shadow: 0 0 1px;}
+.block .block-header > section, .block .block-footer > section {background: white;/* width: calc(100% - 20px); */width: auto;/* height: 30px; *//* line-height: 30px; */position: relative;margin: auto 10px 0 auto;display: flex;display: -webkit-flex;/* border: 1px solid #bbb; *//* box-shadow: 0 0 1px; */border: 1px dashed;}
 .block .block-header > section {margin: 0 auto 0 10px;padding: 0 10px;font-size: 14px;line-height: 50px;} 
 .block .block-footer > section {margin: auto 10px auto auto;} 
 
@@ -165,3 +165,9 @@ page {
 
 [data-before]:before { content: attr(data-before); }
 [data-after]:after { content: attr(data-after); }
+
+xmp {
+  white-space: nowrap;
+  margin: 0;
+  /* color: #777; */
+}

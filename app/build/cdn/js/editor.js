@@ -8,7 +8,7 @@ window.editor = {
             if(ement) {  
               var tagName = ement.dataset.element;
               element = `<block class="block block-`+tagName+`">`;
-                element += `<header class="block-header header"><section>Element 1</section></header>`;
+                element += `<header class="block-header header"><section><xmp><`+tagName+`></`+tagName+`></xmp></section></header>`;
                 element += `<section class="block-section `+tagName+`"></section>`;
                 element += `<footer class="block-footer insert"><section data-evt="editor">`;
                   element += `<div class="create" data-crud="create" data-elem="section"></div>`;

@@ -2,7 +2,7 @@ block {
   display: block;
   /* min-height:240px; */
   position: relative;
-  margin: 1px 0px 0;
+  margin: 10px 0px 0;
 }
 header block:before {
   content: '';
