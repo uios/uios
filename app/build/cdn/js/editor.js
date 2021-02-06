@@ -2,7 +2,7 @@ window.editor = {
 
     block: {
 
-        create: (target) => { console.log(target);
+        create: (target) => { //console.log(target);
 
             var ement = target.closest('[data-element]');
             if(ement) {  
@@ -35,7 +35,7 @@ window.editor = {
 
     },
 
-    card: {
+    section: {
 
         create: (ev) => {
 

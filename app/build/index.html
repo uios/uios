@@ -5,105 +5,164 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
         <title>Build</title>
         <link rel="stylesheet" href="./index.css">  
-        <link rel="stylesheet" href="./cdn/css/editor.css">   
-        <link rel="stylesheet" href="./cdn/css/blocks.css">  
-        <link rel="stylesheet" href="./cdn/css/iconic.css">       
         <script src="./index.js"></script>  
-        <script src="./cdn/js/jpurey.js"></script>   
-        <script src="./cdn/js/on.js"></script>
-        <script src="./cdn/js/modal.js"></script>
-        <script src="./cdn/js/router.js"></script>
-        <script src="./cdn/js/editor.js"></script>
     </head>
     <body class="body loading" data-page="/"><!--
 
         --><boot><img class="icon load anim-rotate"></boot><!--
-    
-        --><nav class="bottom-left"><!--
-            --><div class="pages"><a></a></div><!--
-            --><div class="files"><a></a></div><!--
-            --><div class="board"><a></a></div><!--
-        --></nav><!--
-        --><nav class="bottom-right"><!--
-            --><div class="dots3"><a></a></div><!--
-        --></nav><!--
 
-        --><block class="create header">
-            <section>
-                <div class="create create-header">
-                    <header>Add a header at the top of the template.</header>
-                    <section><icon class="icon create-section"></icon></section>
-                    <footer data-crud="create" data-elem="block"><xmp><header></header></xmp></footer>
-                </div>
-            </section>
-        </block><!--
-        
-        --><block class="create nav">
-            <section>
-                <div class="create create-nav" data-element="nav">
-                    <header>Create a global navigation menu.</header>
-                    <section><icon class="icon create-section"></icon></section>
-                    <footer data-crud="create" data-elem="block"><xmp><nav></nav></xmp></footer>
-                </div>
-            </section>
-        </block><!--
+        -->
+        <nav class="top-left">
+          <!--
+                    -->
+          <div class="pages"><a></a></div>
+          <!--
+                    -->
+          <div class="files"><a></a></div>
+          <!--
+                    -->
+          <div class="board"><a></a></div>
+          <!--
+                -->
+        </nav>
+        <!--
+                -->
+        <nav class="bottom-right">
+          <!--
+                    -->
+          <div class="dots3"><a></a></div>
+          <!--
+                -->
+        </nav>
+        <!--
 
-        --><block class="create section" data-element="section">
-            <section>
-                <div class="create create-section" data-element="footer">
-                    <header>Place a new section near the header.</header>
-                    <section><icon class="icon create-section"></icon></section>
-                    <footer data-element="block"><xmp><section></section></xmp></footer>
-                </div>
-            </section>
+                -->
+        <block class="create header">
+          <section>
+            <div class="create create-header">
+              <header>Add a header at the top of the template.</header>
+              <section>
+                <icon class="icon create-section"></icon>
+              </section>
+              <footer data-crud="create" data-elem="block">
+                <xmp>
+                  <header></header>
+                </xmp>
+              </footer>
+            </div>
+          </section>
+        </block>
+        <!--
+
+                -->
+        <block class="create nav">
+          <section>
+            <div class="create create-nav" data-element="nav">
+              <header>Create a global navigation menu.</header>
+              <section>
+                <icon class="icon create-section"></icon>
+              </section>
+              <footer data-crud="create" data-elem="block">
+                <xmp>
+                  <nav></nav>
+                </xmp>
+              </footer>
+            </div>
+          </section>
+        </block>
+        <!--
+
+                -->
+        <block class="create section" data-element="section">
+          <section>
+            <div class="create create-section" data-element="footer">
+              <header>Place a new section near the header.</header>
+              <section>
+                <icon class="icon create-section"></icon>
+              </section>
+              <footer data-element="block">
+                <xmp>
+                  <section></section>
+                </xmp>
+              </footer>
+            </div>
+          </section>
         </block>
 
         <main class="body-main main">
-            <page class="page page-index" data-page="/" data-path="/">
-                <block class="create empty-page">
+          <page class="page page-index" data-page="/" data-path="/">
+            <block class="create empty-page">
+              <section>
+                <section>
+                  <div class="create create-div" data-element="div">
+                    <header>Make a block for managing content.</header>
                     <section>
-                        <section>
-                            <div class="create create-div" data-element="div">
-                                <header>Make a block for managing content.</header>
-                                <section><icon class="icon create-section"></icon></section>
-                                <footer data-crud="create" data-elem="block"><xmp><div></div></xmp></footer>
-                            </div>
-                        </section>
+                      <icon class="icon create-section"></icon>
                     </section>
-                </block>
-            </page>
+                    <footer data-crud="create" data-elem="block">
+                      <xmp>
+                        <div></div>
+                      </xmp>
+                    </footer>
+                  </div>
+                </section>
+              </section>
+            </block>
+          </page>
         </main>
 
         <block class="create section" data-element="section">
-            <section>
-                <div class="create create-footer" data-element="footer">
-                    <header>Place a new section near the footer.</header>
-                    <section><icon class="icon create-section"></icon></section>
-                    <footer data-element="block"><xmp><section></section></xmp></footer>
-                </div>
-            </section>
-        </block><!--
+          <section>
+            <div class="create create-footer" data-element="footer">
+              <header>Place a new section near the footer.</header>
+              <section>
+                <icon class="icon create-section"></icon>
+              </section>
+              <footer data-element="block">
+                <xmp>
+                  <section></section>
+                </xmp>
+              </footer>
+            </div>
+          </section>
+        </block>
+        <!--
 
 
-        
-        --><block class="create nav" data-element="nav">
-            <section>
-                <div class="create create-nav" data-element="nav">
-                    <header>Create a global navigation menu.</header>
-                    <section><icon class="icon create-section"></icon></section>
-                    <footer data-element="block"><xmp><nav></nav></xmp></footer>
-                </div>
-            </section>
-        </block><!--
 
-        --><block class="create footer" data-element="footer">
-            <section>
-                <div class="create create-footer" data-element="footer">
-                    <header>Add a footer at the bottom of the template.</header>
-                    <section><icon class="icon create-section"></icon></section>
-                    <footer data-element="block"><xmp><footer></footer></xmp></footer>
-                </div>
-            </section>
+                -->
+        <block class="create nav" data-element="nav">
+          <section>
+            <div class="create create-nav" data-element="nav">
+              <header>Create a global navigation menu.</header>
+              <section>
+                <icon class="icon create-section"></icon>
+              </section>
+              <footer data-element="block">
+                <xmp>
+                  <nav></nav>
+                </xmp>
+              </footer>
+            </div>
+          </section>
+        </block>
+        <!--
+
+                -->
+        <block class="create footer" data-element="footer">
+          <section>
+            <div class="create create-footer" data-element="footer">
+              <header>Add a footer at the bottom of the template.</header>
+              <section>
+                <icon class="icon create-section"></icon>
+              </section>
+              <footer data-element="block">
+                <xmp>
+                  <footer></footer>
+                </xmp>
+              </footer>
+            </div>
+          </section>
         </block>
 
         <template id="block-header"></template>
@@ -113,9 +172,58 @@
         <template id="block-section"></template>
 
         <template id="block-div"></template>
-        <template id="block-div-section"><section class="block-section"></section></template>
-        
+        <template id="block-div-section">
+          <section class="block-section"></section>
+        </template>
+
         <template id="block-footer"></template>
+
+        <script>
+          window.onload = () => { //alert('loaded');
+
+            var dom = {
+              doc: document,
+              body: document.body,
+              main: document.body.querySelector("main")
+            };
+
+            dom.body.dataset.load = "ed";
+
+            dom.doc.onclick = event => on.touch.tap(event);
+
+          };
+          window.on = {
+
+              touch: {
+
+                  tap: (event) => {//console.log(event);
+
+                      var target = event.target;
+
+                      var id = target.closest("[id]");
+
+                      var className = target.className;
+
+                      var link = target.closest('[data-href]');
+                      if(link) {
+                          link.dataset.href.router();
+                      }
+
+                      var func = target.closest('[data-crud]');
+                      if (func) {    
+                        editor[func.dataset.elem][func.dataset.crud](target);
+                      }
+
+                      var ev = target.closest("[data-evt]");
+                      if (ev) {
+                        var evt = ev.dataset.evt;
+                      }
+                  }
+
+              }
+
+          }
+        </script>
 
     </body>
 </html>

@@ -19,12 +19,10 @@ String.prototype.router = function(a) {
 
   return new Promise(function (resolve, reject) {
     if (path) {
-      view(path)
-        .then((state) => { console.log(state.path);
+      view(path).then((state) => {
                           
           var m = window.location.origin;
           var url = new URL(state.path,m);
-          //console.log({url});
           var search = url.search;
           var path = url.pathname.replace(/\/?$/, "/");
 
@@ -103,11 +101,9 @@ function view(path) {
   var state = rout.e(path);
   var get = state.GOT;
   var root = get[0];
-  return new Promise(function (resolve, reject) {
+  return new Promise(function async(resolve, reject) {
     if (root) {
-      if (root === "users") {
-        resolve(state);
-      }
+      resolve(state);
     } else {
       resolve(state);
     }
