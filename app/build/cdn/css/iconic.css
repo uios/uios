@@ -220,14 +220,15 @@
     border: 1px solid #bbb;
 }
 
-.dots {
+/*DOTS*/
+.icon.dots {
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: black;
   position: relative;
 }
-.dots:before, .dots:after {
+.icon.dots:before, .dots:after {
   content: '';
   width: 100%;
   height: 100%;
@@ -236,9 +237,84 @@
   position: absolute;
   border-radius: 50%;
 }
-.dots:before {
+.icon.dots:before {
   top: 150%;
 }
-.dots:after {
+.icon.dots:after {
   bottom: 150%;
 }
+/*DOTS*/
+
+/*PLUS*/
+.icon.plus {
+  width: 5px;
+  height: 60%;
+  border-radius: 50%;
+  /* background: black; */
+  position: relative;
+  margin: auto;
+}
+.icon.plus:before, .icon.plus:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: black;
+  position: absolute;
+  border-radius: 10px;
+}
+.icon.plus:before {
+  transform: rotate(90deg);
+}
+.icon.plus:after {
+  /* bottom: 150%; */
+}
+/*PLUS*/
+
+/*EXIT*/
+.icon.exit, .exit {
+  width: 1px;
+  height: 60%;
+  border-radius: 50%;
+  /* background: black; */
+  position: relative;
+}
+.icon.exit:before, .icon.exit:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: black;
+  position: absolute;
+  border-radius: 10px;
+}
+.icon.exit:before {
+  transform: rotate(45deg);
+}
+.icon.exit:after {
+  transform: rotate(135deg);
+}
+/*EXIT*/
+
+/*EYE*/
+.icon.eye {
+  /* margin: 100px; */
+  width: 50%;
+  height: 50%;
+  border: solid 5px;
+  border-radius:  75% 15%;
+  position: relative;
+  transform: rotate(45deg);
+}
+.icon.eye:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  border: solid 6px;
+  border-radius: 50%;
+  left: 20%;
+  top: 20%;
+}
+/*EYE*/

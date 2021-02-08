@@ -1,8 +1,8 @@
 window.editor = {
 
-    block: {
+    create: {
 
-        create: (target) => { //console.log(target);
+        block: (target) => { //console.log(target);
 
             var ement = target.closest('[data-element]');
             if(ement) {  
@@ -19,15 +19,31 @@ window.editor = {
             }
         },
 
-        read: () => { alert('block.read');
+        section: (ev) => {
 
-        },
+            var block = ev.closest('block');
+            var html = document.getElementById('block-div-section').innerHTML;
+            block.querySelector('.block-footer').insertAdjacentHTML('beforebegin',html);
 
-        update: () => { alert('block.update');
+        }
+
+    },
+
+    read: {
+
+        block: (ev) => {
+
+            ev.closest('block').remove();
             
         },
 
-        delete: (ev) => {
+        files: (ev) => {
+
+            modal.popup(byId('files').innerHTML);
+                                    
+        },
+        
+        section: (ev) => { alert('editor.delete.section');
 
             ev.closest('block').remove();
             
@@ -35,25 +51,31 @@ window.editor = {
 
     },
 
-    section: {
+    update: {
 
-        create: (ev) => {
+        block: (ev) => {
 
-            var block = ev.closest('block');
-            var html = document.getElementById('block-div-section').innerHTML;
-            block.querySelector('.block-footer').insertAdjacentHTML('beforebegin',html);
-
+            ev.closest('block').remove();
+            
         },
+        
+        section: (ev) => { alert('editor.delete.section');
 
-        read: () => { alert('block.read');
+            ev.closest('block').remove();
+            
+        }
 
-        },
+    },
 
-        update: () => { alert('block.update');
+    delete: {
+
+        block: (ev) => {
+
+            ev.closest('block').remove();
             
         },
 
-        delete: (ev) => { alert('block.delete');
+        section: (ev) => { alert('editor.delete.section');
 
             ev.closest('block').remove();
             

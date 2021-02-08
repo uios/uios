@@ -1,0 +1,30 @@
+page block section figure.selected picture {
+    border: 2px solid #ff3b30;
+}
+
+.page-gallery {
+    color: white;
+}
+
+.page-gallery > header {
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    display: -webkit-flex;
+}
+.page-gallery > header > span {
+    width: auto;
+    height: 30px;
+    padding: 10px 0;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: invert(1);
+    color: black;
+    font-size: 18px;
+}
+.page-gallery > header > span:first-child {
+    width: 30px;
+    padding: 10px;
+}

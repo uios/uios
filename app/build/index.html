@@ -5,11 +5,18 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
         <title>Build</title>
         <link rel="stylesheet" href="./index.css">  
-        <script src="./index.js"></script>  
+        <link rel="stylesheet" href="./cdn/css/gallery.css">
+        <link rel="stylesheet" href="./cdn/css/iconic.css">  
+        <link rel="stylesheet" href="./cdn/css/modal.css">  
+        <script src="./cdn/js/jpurey.js"></script> 
+        <script src="./index.js"></script> 
+        <script src="./cdn/js/editor.js"></script>  
+        <script src="./cdn/js/on.js"></script> 
+        <script src="./cdn/js/modal.js"></script> 
     </head>
     <body class="body loading" data-page="/"><!--
 
-        --><boot><img class="icon load anim-rotate"></boot><!--
+        --><boot id="boot"><img class="icon load anim-rotate"></boot><!--
 
         -->
         <nav class="top-left">
@@ -18,7 +25,7 @@
           <div class="pages"><a></a></div>
           <!--
                     -->
-          <div class="files"><a></a></div>
+          <div class="files" data-api="editor" data-resource="files" data-method="read"><a></a></div>
           <!--
                     -->
           <div class="board"><a></a></div>
@@ -99,7 +106,7 @@
                     <section>
                       <icon class="icon create-section"></icon>
                     </section>
-                    <footer data-crud="create" data-elem="block">
+                    <footer data-api="editor" data-method="create" data-resource="block">
                       <xmp>
                         <div></div>
                       </xmp>
@@ -178,52 +185,17 @@
 
         <template id="block-footer"></template>
 
-        <script>
-          window.onload = () => { //alert('loaded');
-
-            var dom = {
-              doc: document,
-              body: document.body,
-              main: document.body.querySelector("main")
-            };
-
-            dom.body.dataset.load = "ed";
-
-            dom.doc.onclick = event => on.touch.tap(event);
-
-          };
-          window.on = {
-
-              touch: {
-
-                  tap: (event) => {//console.log(event);
-
-                      var target = event.target;
-
-                      var id = target.closest("[id]");
-
-                      var className = target.className;
-
-                      var link = target.closest('[data-href]');
-                      if(link) {
-                          link.dataset.href.router();
-                      }
-
-                      var func = target.closest('[data-crud]');
-                      if (func) {    
-                        editor[func.dataset.elem][func.dataset.crud](target);
-                      }
-
-                      var ev = target.closest("[data-evt]");
-                      if (ev) {
-                        var evt = ev.dataset.evt;
-                      }
-                  }
-
-              }
-
-          }
-        </script>
+        <template id="files"><!--
+            --><page class="page-gallery"><!--
+                --><header><span data-browse="exit"><div class="icon exit"></div></span><span>Gallery</span></header><!--
+                --><section class="grid"><!--
+                        --><figure class="photo"><picture><img src="https://picsum.photos/id/640/640/640.jpg"></picture></figure><!--
+                        --><figure class="video"><picture><img src="https://img.youtube.com/vi/WvTdNwyADZc/maxresdefault.jpg"></picture></figure><!--            --><figure class="audio"><picture><img></picture></figure><!--
+                        --><figure class="embed"><picture><img></picture></figure><!--
+                        --><figure class="pages"><picture><img></picture></figure><!--
+                --></section><!--
+            --></page><!--
+        --></template>
 
     </body>
 </html>

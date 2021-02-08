@@ -1,64 +1,25 @@
-window.editor = {
 
-    block: {
+  window.onload = () => { //alert('loaded');
 
-        create: (target) => { //console.log(target);
+    var dom = {
+      doc: document,
+      body: document.body,
+      main: document.body.querySelector("main")
+    };
 
-            var ement = target.closest('[data-element]');
-            if(ement) {  
-              var tagName = ement.dataset.element;
-              element = `<block class="block block-`+tagName+`">`;
-                element += `<header class="block-header header"><section><xmp><`+tagName+`></`+tagName+`></xmp></section></header>`;
-                element += `<section class="block-section `+tagName+`"></section>`;
-                element += `<footer class="block-footer insert"><section data-evt="editor">`;
-                  element += `<div class="create" data-crud="create" data-elem="section"></div>`;
-                  element += `<div class="delete" data-crud="delete" data-elem="block"></div>`;
-                element += `</section></footer>`;
-              element += `</block>`;
-              ement.closest('.page').lastElementChild.insertAdjacentHTML('beforebegin',element);   
-            }
-        },
+    dom.body.dataset.load = "ed";
 
-        read: () => { alert('block.read');
+    dom.doc.onclick = event => on.touch.tap(event);
 
-        },
-
-        update: () => { alert('block.update');
-            
-        },
-
-        delete: (ev) => {
-
-            ev.closest('block').remove();
-            
+  };
+  
+  window.byLabel = function(obj, label) {
+    if(obj.label === label) { return obj; }
+    for(var i in obj) {
+        if(obj.hasOwnProperty(i)){
+            var foundLabel = findObjectByLabel(obj[i], label);
+            if(foundLabel) { return foundLabel; }
         }
-
-    },
-
-    section: {
-
-        create: (ev) => {
-
-            var block = ev.closest('block');
-            var html = document.getElementById('block-div-section').innerHTML;
-            block.querySelector('.block-footer').insertAdjacentHTML('beforebegin',html);
-
-        },
-
-        read: () => { alert('block.read');
-
-        },
-
-        update: () => { alert('block.update');
-            
-        },
-
-        delete: (ev) => { alert('block.delete');
-
-            ev.closest('block').remove();
-            
-        }
-
     }
-
-}
+    return null;
+  };

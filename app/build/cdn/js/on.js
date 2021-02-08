@@ -1,9 +1,8 @@
 window.on = {
 
     touch: {
-    
-        tap: () => {
-            console.log(event);
+
+        tap: (event) => {//console.log(event);
 
             var target = event.target;
 
@@ -16,14 +15,21 @@ window.on = {
                 link.dataset.href.router();
             }
 
-            var func = target.closest('[data-crud]');
-            if (func) {    
-              editor[func.dataset.elem][func.dataset.crud](target);
+            var library = target.closest('[data-api]');
+            if(library) {
+                window[library.dataset.api][library.dataset.method][library.dataset.resource](target);                  
             }
-            
+
+            var el = target.closest('[data-browse]');
+            if(el) { 
+                if(el.dataset.browse === "exit") {
+                    modal.exit(el);
+                }
+            }
+
             var ev = target.closest("[data-evt]");
-            if (ev) {
-              var evt = ev.dataset.evt;
+            if(ev) {
+                var evt = ev.dataset.evt;
             }
         }
 
