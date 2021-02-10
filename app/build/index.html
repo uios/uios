@@ -178,7 +178,16 @@
 
         <template id="block-section"></template>
 
-        <template id="block-div"></template>
+        <template id="block-div">        
+              <block class="block block-`+tagName+`">
+                <header class="block-header header"><section><xmp><div></div></xmp></section></header>
+                <section class="block-section"></section>
+                <footer class="block-footer insert"><section>
+                  <div class="create" data-api="editor" data-method="create" data-resource="section"></div>
+                  <div class="delete" data-api="editor" data-method="delete" data-resource="block"></div>
+                </section></footer>
+              </block>
+        </template>
         <template id="block-div-section">
           <section class="block-section"></section>
         </template>
