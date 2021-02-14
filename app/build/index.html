@@ -173,39 +173,44 @@
         </block>
 
         <template id="block-header"></template>
-
         <template id="block-nav"></template>
-
         <template id="block-section"></template>
 
         <template id="block-div">        
-              <block class="block block-`+tagName+`">
+              <block class="block">
                 <header class="block-header header"><section><xmp><div></div></xmp></section></header>
-                <section class="block-section"><div></div></section>
+                <section class="block-section">
+                  <div class="block-div">
+                    <section class="block-div-group"><div class="block-div-group-cell"></div></section>
+                    <footer class="block-footer insert"><section>
+                      <div class="create" data-api="editor" data-method="create" data-resource="frame"></div>
+                      <div class="delete" data-api="editor" data-method="delete" data-resource="group"></div>
+                    </section></footer>
+                  </div>
+                </section>
                 <footer class="block-footer insert"><section>
-                  <div class="create" data-api="editor" data-method="create" data-resource="section"></div>
+                  <div class="create" data-api="editor" data-method="create" data-resource="group"></div>
                   <div class="delete" data-api="editor" data-method="delete" data-resource="block"></div>
                 </section></footer>
               </block>
         </template>
-        <template id="block-div-section">
-          <section class="block-section">
-            <div></div>
-          </section>
-        </template>
-
+        
         <template id="block-footer"></template>
 
         <template id="files"><!--
-            --><page class="page-gallery"><!--
-                --><header><span data-browse="exit"><div class="icon exit"></div></span><span>Gallery</span></header><!--
-                --><section class="grid"><!--
-                        --><figure class="photo"><picture><img src="https://picsum.photos/id/640/640/640.jpg"></picture></figure><!--
-                        --><figure class="video"><picture><img src="https://img.youtube.com/vi/WvTdNwyADZc/maxresdefault.jpg"></picture></figure><!--            --><figure class="audio"><picture><img></picture></figure><!--
-                        --><figure class="embed"><picture><img></picture></figure><!--
-                        --><figure class="pages"><picture><img></picture></figure><!--
-                --></section><!--
-            --></page><!--
+                --><figure class="photo"><!--
+                        --><picture><img src="https://picsum.photos/id/640/640/640.jpg"></picture><!--
+                --></figure><!--
+                --><figure class="video"><!--
+                        --><picture><img src="https://img.youtube.com/vi/WvTdNwyADZc/maxresdefault.jpg"></picture><!--
+                        --><figcaption><!--
+                                --><div class="title">Launch Event: Meet Spot's Expanded Product Line</div><!--
+                                --><div class="descrption">We're excited to reveal the latest in Spot's expanded product line. Join us live on Tuesday, February 2nd @ 11 am EST, to hear how these products will extend Spot's value for autonomous inspection and data collection.</div><!--
+                        --></figcaption><!--
+                --></figure><!--            
+                --><figure class="audio"><picture><img></picture></figure><!--
+                --><figure class="embed"><picture><img></picture></figure><!--
+                --><figure class="pages"><picture><img></picture></figure><!--
         --></template>
 
     </body>

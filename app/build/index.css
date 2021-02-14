@@ -168,6 +168,7 @@ nav.bottom-right {
   margin: 0;
   width: 50px;
   left: unset;
+  display: none;
 }
 nav.top-left {
   top: 10px;
@@ -216,14 +217,14 @@ nav > * {
 
 .block .block-header {/* box-shadow: 0 0 1px; */width: calc(100% - 20px);width: 100%;height: 50px;position: relative;}
 
-.block .block-section {margin: 10px;box-shadow: 0 0 1px #000;}
-.block .block-section:empty {min-height: 50px;}
+.block .block-div, .block .block-section {margin: 10px;/* box-shadow: 0 0 1px #000; */}
+.block .block-section > .block-div-section > section:empty {min-height: 50px;border: 1px solid #bbb;}
 
 .block .block-header > section, .block .block-footer > section {background: white;width: calc(100% - 20px);width: auto;/* height: 30px; *//* line-height: 30px; */position: relative;margin: auto 10px 0 auto;display: flex;display: -webkit-flex;border: 1px dashed #bbb;}
 .block .block-header > section {margin: 0 auto 0 10px;padding: 0 10px;font-size: 14px;line-height: 50px;} 
 .block .block-footer > section {margin: auto 10px auto auto;} 
 
-.block-header:before, .block-footer:before {
+.block-header:before, .block > .block-footer:before {
   content: '';
   display: block;
   width: 100%;
@@ -234,7 +235,7 @@ nav > * {
   top: 0;
   bottom: 0;
   margin: auto;
-  border-bottom: 1px dashed #000;
+  border-bottom: 1px dashed #777;
 }
 .block-header, .block-footer {
   width: 100%;
@@ -250,6 +251,7 @@ nav > * {
 
 block {
   display: block;
+  margin: 10px 0;
   /* min-height:240px; */
   position: relative;
   /* margin: 30px 0px 0; */
@@ -337,12 +339,21 @@ page block card {
 
 
 .block {
-  margin: 10px 0;
   /* box-shadow: 0 0 4px; */
 }
 .block .div {
   min-height: 50px;
 }
+
+.block-section > .block-div > .block-div-group {min-height: 50px;box-shadow: inset 0 0 1px #000;}
+.block-section > .block-div > .block-div-group .block-div-group-cell {
+  width: 48px;
+  height: 48px;
+  border: 1px dashed;
+  display: inline-block;
+  vertical-align: top;
+}
+.block-section > .block-div-section:not(:last-child) { margin-bottom: 20px; }
 
 .block .block-header {
   /* box-shadow: 0 0 1px; */
@@ -357,12 +368,15 @@ page block card {
 .block .block-footer > section {
   background: white;
   width: calc(100% - 20px);
-  width: auto; /* height: 30px; */ /* line-height: 30px; */
+  width: auto;
+  /* height: 30px; */
+  /* line-height: 30px; */
   position: relative;
   margin: auto 10px 0 auto;
   display: flex;
   display: -webkit-flex;
-  border: 1px dashed #bbb; /* box-shadow: 0 0 1px; */
+  /* border: 1px dashed #bbb; */
+  /* box-shadow: 0 0 1px; */
 }
 .block .block-header > section {
   margin: 0 auto 0 10px;
@@ -370,28 +384,19 @@ page block card {
   font-size: 14px;
   line-height: 50px;
 }
-.block .block-footer > section {
-  margin: auto 10px auto auto;
+.block .block-div-section > .block-footer > section {
+  margin: auto auto auto 0;
+  border: 1px solid #bbb;
+}
+.block .block-div > .block-footer > section {
+  margin: auto auto auto 0;
+  border: none;
+  box-shadow: inset 0 0 1px #000;
 }
 
-.block-header:before,
-.block-footer:before {
-  content: "";
-  display: block;
+.block-header, .block .block-footer {
   width: 100%;
-  height: 1px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  border-bottom: 1px dashed #bbb;
-}
-.block-header,
-.block-footer {
-  width: 100%;
-  height: 50px;
+  /* height: 50px; */
   margin: auto 10px auto auto;
   background: #fff;
   position: relative;

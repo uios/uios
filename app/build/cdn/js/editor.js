@@ -2,8 +2,7 @@ window.editor = {
 
     create: {
 
-        block: (target) => { //console.log(target);
-
+        block: (target) => {
             var ement = target.closest('[data-element]');
             if(ement) {  
               var tagName = ement.dataset.element;
@@ -12,12 +11,16 @@ window.editor = {
             }
         },
 
-        section: (ev) => {
-
+        group: (ev) => {
             var block = ev.closest('block');
-            var html = document.getElementById('block-div-section').innerHTML;
-            block.querySelector('.block-footer').insertAdjacentHTML('beforebegin',html);
+            var html = byId('block-div').content.firstElementChild.find('.block-div').outerHTML;
+            block.children[1].insertAdjacentHTML('beforeend',html);
+        },
 
+        frame: (ev) => {
+            var block = ev.closest('.block-div');
+            var html = byId('block-div').content.firstElementChild.find('.block-div-group-cell').outerHTML;
+            block.find('.block-div-group').insertAdjacentHTML('beforeend',html);
         }
 
     },
@@ -36,7 +39,7 @@ window.editor = {
                                     
         },
         
-        section: (ev) => { alert('editor.delete.section');
+        section: (ev) => { //alert('editor.delete.section');
 
             ev.closest('block').remove();
             
@@ -68,9 +71,14 @@ window.editor = {
             
         },
 
-        section: (ev) => { alert('editor.delete.section');
+        group: (ev) => { 
 
-            ev.closest('block').remove();
+            var section = ev.closest('.block-section').children;
+            //alert('editor.delete.group: '+section.length);
+
+            section.length < 2 ? 
+                ev.closest('.block').remove() :
+                ev.closest('.block-section > *').remove();
             
         }
 
