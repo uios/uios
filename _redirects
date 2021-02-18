@@ -19,6 +19,11 @@ https://camera.uios.app/index.js /app/camera/index.js 200
 https://camera.uios.app/cdn/* /app/camera/cdn/:splat 200
 https://camera.uios.app/* /app/camera/index.html 200
 
+https://build.uios.app /app/build/index.html 200
+https://build.uios.app/index.css /app/build/index.css 200
+https://build.uios.app/index.js /app/build/index.js 200
+https://build.uios.app/* /app/build/index.html 200
+
 https://clock.uios.app /app/clock/index.html 200
 https://clock.uios.app/index.css /app/clock/index.css 200
 https://clock.uios.app/index.js /app/clock/index.js 200

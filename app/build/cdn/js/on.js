@@ -32,9 +32,19 @@ window.on = {
                 var evt = ev.dataset.evt;
             }
 
-            var cell = target.closest('.block-div-group-cell');
-            if(cell) {
-                console.log(cell);        
+            var block = target.closest('block')
+            if(block) {
+                console.log(cell);
+                var cell = target.closest('.block-div-group-cell');
+                if(cell) {
+                    if(cell.innerHTML === "") {
+                        document.body.dataset.focus = "cell";
+                        $(document.body.querySelectorAll('.--focus-cell')).removeClass('--focus-cell');
+                        cell.classList.add('--focus-cell')               
+                    }    
+                } else {
+                    $(document.body.querySelectorAll('.--focus-cell')).removeClass('--focus-cell');
+                } 
             }
         }
 

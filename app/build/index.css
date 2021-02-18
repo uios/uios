@@ -357,6 +357,9 @@ page block card {
   display: inline-block;
   vertical-align: top;
 }
+.block-section > .block-div > .block-div-group .block-div-group-cell.--focus-cell {
+  border-color: #ff3b30;
+}
 .block-section > .block-div-section:not(:last-child) { margin-bottom: 20px; }
 
 .block .block-header {
