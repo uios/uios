@@ -31,6 +31,11 @@ window.on = {
             if(ev) {
                 var evt = ev.dataset.evt;
             }
+
+            var cell = target.closest('.block-div-group-cell');
+            if(cell) {
+                console.log(cell);        
+            }
         }
 
     }

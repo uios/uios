@@ -8,6 +8,17 @@ window.editor = {
               var tagName = ement.dataset.element;
               var element = byId('block-div').innerHTML; 
               ement.closest('.page').lastElementChild.insertAdjacentHTML('beforebegin',element); 
+              target.closest('block').previousElementSibling.find('xmp').innerHTML = '<div></div>';
+            }
+        },
+
+        header: (target) => {
+            var ement = target.closest('[data-element]');
+            if(ement) {  
+              var tagName = ement.dataset.element;
+              var element = byId('block-div').innerHTML;
+              target.closest('block').insertAdjacentHTML('beforebegin',element); 
+              target.closest('block').previousElementSibling.find('xmp').innerHTML = '<header></header>';
             }
         },
 

@@ -7,12 +7,13 @@
         <link rel="stylesheet" href="./index.css">  
         <link rel="stylesheet" href="./cdn/css/gallery.css">
         <link rel="stylesheet" href="./cdn/css/iconic.css">  
-        <link rel="stylesheet" href="./cdn/css/modal.css">  
-        <script src="./cdn/js/jpurey.js"></script> 
+        <link rel="stylesheet" href="./cdn/css/modal.css">   
+        <link rel="stylesheet" href="./cdn/css/editor.css">  
         <script src="./index.js"></script> 
-        <script src="./cdn/js/editor.js"></script>  
-        <script src="./cdn/js/on.js"></script> 
-        <script src="./cdn/js/modal.js"></script> 
+        <script src="./cdn/js/jpurey.js"></script> 
+        <script async src="./cdn/js/editor.js"></script>  
+        <script async src="./cdn/js/on.js"></script> 
+        <script async src="./cdn/js/modal.js"></script> 
     </head>
     <body class="body loading" data-page="/"><!--
 
@@ -46,12 +47,12 @@
                 -->
         <block class="create header">
           <section>
-            <div class="create create-header">
+            <div class="create create-header" data-element="header">
               <header>Add a header at the top of the template.</header>
               <section>
                 <icon class="icon create-section"></icon>
               </section>
-              <footer data-crud="create" data-elem="block">
+              <footer data-api="editor" data-method="create" data-resource="header">
                 <xmp>
                   <header></header>
                 </xmp>
@@ -97,6 +98,8 @@
         </block>
 
         <main class="body-main main">
+          <header class="main-header"><div class="active" data-href="/">Home</div><div>+</div></header>
+          <span>
           <page class="page page-index" data-page="/" data-path="/">
             <block class="create empty-page">
               <section>
@@ -116,6 +119,7 @@
               </section>
             </block>
           </page>
+          </span>
         </main>
 
         <block class="create section" data-element="section">
@@ -178,7 +182,7 @@
 
         <template id="block-div">        
               <block class="block">
-                <header class="block-header header"><section><xmp><div></div></xmp></section></header>
+                <header class="block-header header"><section><xmp><div></div></xmp><div data-api="editor" data-method="read" data-resource="block"><span class="icon plus"></span></div></section></header>
                 <section class="block-section">
                   <div class="block-div">
                     <section class="block-div-group"><div class="block-div-group-cell"></div></section>
