@@ -36,13 +36,12 @@ window.on = {
             if(block) {
                 console.log(cell);
                 var cell = target.closest('.block-div-group-cell');
-                if(cell) {
-                    if(cell.innerHTML === "") {
-                        document.body.dataset.focus = "cell";
-                        $(document.body.querySelectorAll('.--focus-cell')).removeClass('--focus-cell');
-                        cell.classList.add('--focus-cell')               
-                    }    
+                if(cell && !cell.classList.contains('--focus-cell')) {
+                    document.body.dataset.focus = "cell";
+                    $(document.body.querySelectorAll('.--focus-cell')).removeClass('--focus-cell');
+                    cell.classList.add('--focus-cell');
                 } else {
+                    document.body.removeAttribute('focus');
                     $(document.body.querySelectorAll('.--focus-cell')).removeClass('--focus-cell');
                 } 
             }
