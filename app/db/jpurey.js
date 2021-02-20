@@ -10,7 +10,6 @@ Element.prototype.hasClass = function(n) { return new RegExp(' '+n+' ').test(' '
 Element.prototype.index = function() { var whl = this; [].forEach.call(whl.parentNode.children, (a, b, c) => (a === whl) ? whl = b : null); return whl; };
 
 window.byId = s => { return document.getElementById(s); }
-
 window.$ = obj => { return (typeof obj === 'object') ? (NodeList.prototype.isPrototypeOf(obj)) ? [].slice.call(obj) : (Element.prototype.isPrototypeOf(obj) ? [obj] : null) : (typeof obj === 'string' ? [].slice.call(obj) : null); }
 
 function ajax(url, settings) { //console.log(url,settings);

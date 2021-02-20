@@ -60,21 +60,21 @@ nav section ul li {
 }
 
 /*Pages*/
-body[data-path="/"] .page-index {
+body[data-page="/"] .page-index {
   display: block;
 }
-body[data-path="/databases/"] .page-databases {
+body[data-page="/databases/"] .page-databases {
   display: block;
 }
-body[data-path="/"] .section-databases,
-body[data-path="/databases/"] .section-databases,
-body[data-path="/export/"] .section-databases,
-body[data-path="/import/"] .section-databases {
+body[data-page="/"] .section-databases,
+body[data-page="/databases/"] .section-databases,
+body[data-page="/export/"] .section-databases,
+body[data-page="/import/"] .section-databases {
   display: block;
 }
-body[data-path="/*/structure/"] .section-database,
-body[data-path="/*/search/"] .section-database,
-body[data-path="/*/export/"] .section-database,
-body[data-path="/*/import/"] .section-database {
+body[data-page="/databases/*/"] .section-database,
+body[data-page="/*/search/"] .section-database,
+body[data-page="/*/export/"] .section-database,
+body[data-page="/*/import/"] .section-database {
   display: block;
 }
