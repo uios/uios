@@ -79,3 +79,12 @@ https://uios.app/site.webmanifest /web/site.webmanifest 200
 https://uios.app/sw.js /web/sw.js 200
 https://uios.app/cdn/* /web/cdn/:splat 200
 https://uios.app/* /web/index.html 200
+
+https://uios.netlify.app /web/index.html 200
+https://uios.netlify.app/favicon.ico /web/favicon.ico 200
+https://uios.netlify.app/index.css /web/index.css 200
+https://uios.netlify.app/index.js /web/index.js 200
+https://uios.netlify.app/site.webmanifest /web/site.webmanifest 200
+https://uios.netlify.app/sw.js /web/sw.js 200
+https://uios.netlify.app/cdn/* /web/cdn/:splat 200
+https://uios.netlify.app/* /web/index.html 200
