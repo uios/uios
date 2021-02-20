@@ -124,7 +124,7 @@
             var html = ``;
             var d = 0;
             do {
-              html += `<li>` + dbs[d].name + `</li>`;
+              html += `<li data-href="/databases/` + name + `/">` + dbs[d].name + `</li>`;
               d++;
             } while (d < dbs.length);
             document.getElementById('nav-section-ul').innerHTML = html;
