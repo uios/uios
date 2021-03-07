@@ -1,4 +1,0 @@
-﻿RewriteEngine on
-RewriteCond %{HTTP_HOST} ^((?!www\.)[^.]+)\.uios\.localhost$
-RewriteCond %1::%{REQUEST_URI} !^(.*?)::/\1/?
-RewriteRule ^(.*)$ /%1/$1 [L,QSA]

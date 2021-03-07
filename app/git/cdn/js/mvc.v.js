@@ -1,3 +1,0 @@
-window.mvc.v = {
-
-}

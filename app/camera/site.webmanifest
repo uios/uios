@@ -1,9 +1,0 @@
-{
-    "name": "Camera",
-    "short_name": "camera",
-    "theme_color": "#2d2d2d",
-    "background_color": "#2d2d2d",
-    "start_url": "/",
-    "display": "standalone",
-    "orientation": "portrait"
-}
