@@ -1,90 +1,12 @@
-https://arcade.uios.app /app/arcade/index.html 200
-https://arcade.uios.app/elements/* /app/arcade/elements/:splat 200
+ /index.html 200
 
-https://elements.uios.app /app/elements/index.html 200
-https://elements.uios.app/index.css /app/elements/index.css 200
-https://elements.uios.app/index.js /app/elements/index.js 200
-https://elements.uios.app/cdn/* /app/elements/cdn/:splat 200
-https://elements.uios.app/* /app/elements/index.html 200
+/index.css /index.css 200
+/index.js /index.js 200
+/robots.txt /robots.txt 200
+/site.webmanifest /site.webmanifest 200
+/sitemap.txt /sitemap.txt 200
+/sw.js /sw.js 200
+/cdn/* /cdn/:splat 200
+/themes/* /themes/:splat 200
 
-https://calculator.uios.app /app/calculator/index.html 200
-https://calculator.uios.app/index.css /app/calculator/index.css 200
-https://calculator.uios.app/index.js /app/calculator/index.js 200
-https://calculator.uios.app/cdn/* /app/calculator/cdn/:splat 200
-https://calculator.uios.app/* /app/calculator/index.html 200
-
-https://camera.uios.app /app/camera/index.html 200
-https://camera.uios.app/index.css /app/camera/index.css 200
-https://camera.uios.app/index.js /app/camera/index.js 200
-https://camera.uios.app/cdn/* /app/camera/cdn/:splat 200
-https://camera.uios.app/* /app/camera/index.html 200
-
-https://build.uios.app /app/build/index.html 200
-https://build.uios.app/index.css /app/build/index.css 200
-https://build.uios.app/index.js /app/build/index.js 200
-https://build.uios.app/* /app/build/index.html 200
-
-https://clock.uios.app /app/clock/index.html 200
-https://clock.uios.app/index.css /app/clock/index.css 200
-https://clock.uios.app/index.js /app/clock/index.js 200
-https://clock.uios.app/cdn/* /app/clock/cdn/:splat 200
-https://clock.uios.app/* /app/clock/index.html 200
-
-https://code.uios.app /app/code/index.html 200
-https://code.uios.app/index.css /app/code/index.css 200
-https://code.uios.app/index.js /app/code/index.js 200
-https://code.uios.app/* /app/code/index.html 200
-
-https://files.uios.app /app/files/index.html 200
-https://files.uios.app/index.css /app/files/index.css 200
-https://files.uios.app/index.js /app/files/index.js 200
-https://files.uios.app/cdn/* /app/files/cdn/:splat 200
-https://files.uios.app/* /app/files/index.html 200
-
-https://git.uios.app /app/git/index.html 200
-https://git.uios.app/index.css /app/git/index.css 200
-https://git.uios.app/index.js /app/git/index.js 200
-https://git.uios.app/cdn/* /app/git/cdn/:splat 200
-https://git.uios.app/* /app/git/index.html 200
-
-https://ide.uios.app /app/ide/index.html 200
-https://ide.uios.app/index.css /app/ide/index.css 200
-https://ide.uios.app/index.js /app/ide/index.js 200
-https://ide.uios.app/cdn/* /app/ide/cdn/:splat 200
-https://ide.uios.app/* /app/ide/index.html 200
-
-https://jukebox.uios.app /app/jukebox/index.html 200
-https://jukebox.uios.app/index.css /app/jukebox/index.css 200
-https://jukebox.uios.app/index.js /app/jukebox/index.js 200
-https://jukebox.uios.app/cdn/* /app/jukebox/cdn/:splat 200
-https://jukebox.uios.app/* /app/jukebox/index.html 200
-
-https://live.uios.app /app/live/index.html 200
-https://live.uios.app/index.css /app/live/index.css 200
-https://live.uios.app/index.js /app/live/index.js 200
-https://live.uios.app/cdn/* /app/live/cdn/:splat 200
-https://live.uios.app/* /app/live/index.html 200
-
-https://notes.uios.app /app/notes/index.html 200
-https://notes.uios.app/index.css /app/notes/index.css 200
-https://notes.uios.app/index.js /app/notes/index.js 200
-https://notes.uios.app/cdn/* /app/notes/cdn/:splat 200
-https://notes.uios.app/* /app/notes/index.html 200
-
-https://uios.app /web/index.html 200
-https://uios.app/favicon.ico /web/favicon.ico 200
-https://uios.app/index.css /web/index.css 200
-https://uios.app/index.js /web/index.js 200
-https://uios.app/site.webmanifest /web/site.webmanifest 200
-https://uios.app/sw.js /web/sw.js 200
-https://uios.app/cdn/* /web/cdn/:splat 200
-https://uios.app/* /web/index.html 200
-
-https://uios.netlify.app /web/index.html 200
-https://uios.netlify.app/favicon.ico /web/favicon.ico 200
-https://uios.netlify.app/index.css /web/index.css 200
-https://uios.netlify.app/index.js /web/index.js 200
-https://uios.netlify.app/site.webmanifest /web/site.webmanifest 200
-https://uios.netlify.app/sw.js /web/sw.js 200
-https://uios.netlify.app/cdn/* /web/cdn/:splat 200
-https://uios.netlify.app/* /web/index.html 200
+/* /index.html 200
